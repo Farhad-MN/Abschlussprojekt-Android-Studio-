@@ -30,4 +30,29 @@
         android:name="com.example.abschlussaufgabe.ui.EinstellugFragment"
         android:label="fragment_einstellug"
         tools:layout="@layout/fragment_einstellug" />
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.abschlussaufgabe.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/regisMediFragment2"
+        android:name="com.example.abschlussaufgabe.ui.RegisMediFragment"
+        android:label="fragment_regis_medi"
+        tools:layout="@layout/fragment_regis_medi" />
+    <fragment
+        android:id="@+id/registrierungFragment2"
+        android:name="com.example.abschlussaufgabe.ui.RegistrierungFragment"
+        android:label="fragment_registrierung"
+        tools:layout="@layout/fragment_registrierung" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.abschlussaufgabe.ui.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.abschlussaufgabe.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 </navigation>
