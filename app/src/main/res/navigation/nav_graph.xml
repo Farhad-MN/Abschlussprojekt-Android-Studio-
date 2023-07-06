@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.abschlussaufgabe.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/planenFragment"
+        android:name="com.example.abschlussaufgabe.ui.PlanenFragment"
+        android:label="fragment_planen"
+        tools:layout="@layout/fragment_planen" />
+    <fragment
+        android:id="@+id/aufzeichnenFragment"
+        android:name="com.example.abschlussaufgabe.ui.AufzeichnenFragment"
+        android:label="fragment_aufzeichnen"
+        tools:layout="@layout/fragment_aufzeichnen" />
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.abschlussaufgabe.ui.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/einstellugFragment"
+        android:name="com.example.abschlussaufgabe.ui.EinstellugFragment"
+        android:label="fragment_einstellug"
+        tools:layout="@layout/fragment_einstellug" />
+</navigation>
