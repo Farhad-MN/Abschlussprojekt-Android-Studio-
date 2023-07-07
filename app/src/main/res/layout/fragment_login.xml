@@ -13,6 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:background="#2AFFFFFF"
+        android:backgroundTint="#02FFFFFF"
         android:src="@drawable/app"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,12 +37,14 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
+        android:hint="mailadresse@muster.com"
         android:inputType="text"
-        android:text="Name"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,30 +52,33 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="passwort eingeben"
         android:inputType="textPassword"
         android:textColor="@color/white"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/editTextText"
         app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        tools:visibility="visible" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_Anmelden"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:backgroundTint="#F6B664"
-        android:text="Login"
+        android:text="Anmelden"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/btn_Facebook"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="55dp"
@@ -83,27 +90,39 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton11"
+        android:id="@+id/btn_Instagram"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="70dp"
         android:background="#1DFFFFFF"
         android:src="@drawable/insta"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton10"
-        app:layout_constraintStart_toEndOf="@+id/imageButton10"
-        app:layout_constraintTop_toTopOf="@+id/imageButton10"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Facebook"
+        app:layout_constraintStart_toEndOf="@+id/btn_Facebook"
+        app:layout_constraintTop_toTopOf="@+id/btn_Facebook"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imageButton12"
+        android:id="@+id/btn_Google"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="70dp"
         android:background="#79FFFFFF"
         android:src="@drawable/google_plus_1"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton11"
-        app:layout_constraintStart_toEndOf="@+id/imageButton11"
-        app:layout_constraintTop_toTopOf="@+id/imageButton11"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Instagram"
+        app:layout_constraintStart_toEndOf="@+id/btn_Instagram"
+        app:layout_constraintTop_toTopOf="@+id/btn_Instagram"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#F6B664"
+        android:text="Registrierung"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
