@@ -2,4 +2,12 @@
     <string name="app_name">AbschlussAufgabe</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="sportart_01">Mountainbike</string>
+    <string name="sportart_02">Wandern</string>
+    <string name="sportart_03">Fahrrad</string>
+    <string name="sportart_04">Bikepacking</string>
+    <string name="sportart_05">Rennrad</string>
+    <string name="sportart_06">Laufen</string>
+
 </resources>

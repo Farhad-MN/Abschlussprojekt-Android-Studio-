@@ -1,128 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#5B5A5A"
-    tools:context=".ui.LoginFragment" >
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="#2AFFFFFF"
-        android:backgroundTint="#02FFFFFF"
-        android:src="@drawable/app"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="263dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="30dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:text="Willkommen bei  Bike + walk "
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    </data>
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="mailadresse@muster.com"
-        android:inputType="text"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5B5A5A"
+        tools:context=".ui.LoginFragment">
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="passwort eingeben"
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        tools:visibility="visible" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#2AFFFFFF"
+            android:backgroundTint="#02FFFFFF"
+            android:src="@drawable/app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_Anmelden"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:backgroundTint="#F6B664"
-        android:text="Anmelden"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="263dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="30dp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Willkommen bei  Bike + walk "
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageButton
-        android:id="@+id/btn_Facebook"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="55dp"
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#676262"
+            android:ems="10"
+            android:hint="mailadresse@muster.com"
+            android:inputType="text"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        android:layout_marginBottom="144dp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/frame_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="passwort eingeben"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/editTextText"
+            app:layout_constraintStart_toStartOf="@+id/editTextText"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText"
+            tools:visibility="visible" />
 
-    <ImageButton
-        android:id="@+id/btn_Instagram"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="70dp"
-        android:background="#1DFFFFFF"
-        android:src="@drawable/insta"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Facebook"
-        app:layout_constraintStart_toEndOf="@+id/btn_Facebook"
-        app:layout_constraintTop_toTopOf="@+id/btn_Facebook"
-        app:layout_constraintVertical_bias="0.0" />
+        <Button
+            android:id="@+id/btn_Anmelden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="#F6B664"
+            android:text="Anmelden"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
-    <ImageButton
-        android:id="@+id/btn_Google"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="70dp"
-        android:background="#79FFFFFF"
-        android:src="@drawable/google_plus_1"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Instagram"
-        app:layout_constraintStart_toEndOf="@+id/btn_Instagram"
-        app:layout_constraintTop_toTopOf="@+id/btn_Instagram"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageButton
+            android:id="@+id/btn_Facebook"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="55dp"
 
-    <Button
-        android:id="@+id/btn_Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:backgroundTint="#F6B664"
-        android:text="Registrierung"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:layout_marginBottom="144dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/frame_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/btn_Instagram"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="70dp"
+            android:background="#1DFFFFFF"
+            android:src="@drawable/insta"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_Facebook"
+            app:layout_constraintStart_toEndOf="@+id/btn_Facebook"
+            app:layout_constraintTop_toTopOf="@+id/btn_Facebook"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/btn_Google"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="70dp"
+            android:background="#79FFFFFF"
+            android:src="@drawable/google_plus_1"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_Instagram"
+            app:layout_constraintStart_toEndOf="@+id/btn_Instagram"
+            app:layout_constraintTop_toTopOf="@+id/btn_Instagram"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btn_Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:backgroundTint="#F6B664"
+            android:text="Registrierung"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

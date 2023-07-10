@@ -1,14 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.RegistrierungFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/background"
+        tools:context=".ui.RegistrierungFragment">
 
-</FrameLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:background="@color/button"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrierung "
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+            app:layout_constraintStart_toStartOf="@+id/toolbar2"
+            app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="405dp"
+            android:layout_height="661dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.833"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+            app:layout_constraintVertical_bias="1.0">
+
+            <EditText
+                android:id="@+id/editText_Vorname"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="80dp"
+                android:background="#838080"
+                android:ems="10"
+                android:inputType="text|textAutoComplete"
+                android:text="Vorname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_nachname"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="#838080"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Nachname"
+                app:layout_constraintEnd_toEndOf="@+id/editText_Vorname"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editText_Vorname"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Vorname" />
+
+            <EditText
+                android:id="@+id/editTextTextPostalAddress2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="#838080"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                app:layout_constraintEnd_toEndOf="@+id/editText_nachname"
+                app:layout_constraintStart_toStartOf="@+id/editText_nachname"
+                app:layout_constraintTop_toBottomOf="@+id/editText_nachname" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="#838080"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPostalAddress2"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPostalAddress2"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress2" />
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="#838080"
+                android:ems="10"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="120dp"
+                android:backgroundTint="@color/button"
+                android:text="Kontoerstellen"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
