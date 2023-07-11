@@ -19,8 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:background="#2AFFFFFF"
-            android:backgroundTint="#02FFFFFF"
+            android:background="@color/background"
+            android:backgroundTint="@color/background"
             android:src="@drawable/app"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,22 +33,22 @@
             android:layout_marginTop="30dp"
             android:foregroundGravity="center"
             android:gravity="center"
-            android:text="Willkommen bei  Bike + walk "
+            android:text="@string/willkommen_bei_bike_walk"
             android:textColor="@color/white"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/tv_Email"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="#676262"
+            android:backgroundTint="@color/background"
             android:ems="10"
             android:hint="mailadresse@muster.com"
             android:inputType="text"
@@ -58,7 +58,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/tv_Password"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -67,9 +67,9 @@
             android:inputType="textPassword"
             android:textColor="@color/white"
             android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="@+id/editTextText"
-            app:layout_constraintStart_toStartOf="@+id/editTextText"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText"
+            app:layout_constraintEnd_toEndOf="@+id/tv_Email"
+            app:layout_constraintStart_toStartOf="@+id/tv_Email"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Email"
             tools:visibility="visible" />
 
         <Button
@@ -82,7 +82,7 @@
             android:text="Anmelden"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_Password" />
 
         <ImageButton
             android:id="@+id/btn_Facebook"
@@ -125,8 +125,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="48dp"
-            android:backgroundTint="#F6B664"
-            android:text="Registrierung"
+            android:backgroundTint="@color/btn_registieren"
+            android:text="Registrieren"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

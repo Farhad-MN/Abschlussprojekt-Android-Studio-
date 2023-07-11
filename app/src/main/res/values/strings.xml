@@ -9,5 +9,8 @@
     <string name="sportart_04">Bikepacking</string>
     <string name="sportart_05">Rennrad</string>
     <string name="sportart_06">Laufen</string>
+    <string name="registrierung">Registrierung</string>
+    <string name="kategorien">Kategorien</string>
+    <string name="willkommen_bei_bike_walk">Willkommen bei Bike + walk</string>
 
 </resources>

@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#5B5A5A</color>
     <color name="button">#F6B664</color>
+    <color name="btn_registieren">#F6B664</color>
+    <color name="backgroundhome">#40C4FF</color>
 </resources>
