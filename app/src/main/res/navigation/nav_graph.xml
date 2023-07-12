@@ -31,7 +31,7 @@
         tools:layout="@layout/fragment_profil" />
     <fragment
         android:id="@+id/einstellugFragment"
-        android:name="com.example.abschlussaufgabe.ui.EinstellugFragment"
+        android:name="com.example.abschlussaufgabe.ui.EinstellungFragment"
         android:label="fragment_einstellug"
         tools:layout="@layout/fragment_einstellug" />
     <fragment

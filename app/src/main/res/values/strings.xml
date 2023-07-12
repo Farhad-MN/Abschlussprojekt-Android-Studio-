@@ -3,14 +3,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="sportart_01">Mountainbike</string>
-    <string name="sportart_02">Wandern</string>
-    <string name="sportart_03">Fahrrad</string>
-    <string name="sportart_04">Bikepacking</string>
-    <string name="sportart_05">Rennrad</string>
-    <string name="sportart_06">Laufen</string>
+    <string name="category_01">Mountainbike</string>
+    <string name="category_02">Wandern</string>
+    <string name="category_03">Fahrrad</string>
+    <string name="category_04">Bikepacking</string>
+    <string name="category_05">Rennrad</string>
+    <string name="category_06">Laufen</string>
+
     <string name="registrierung">Registrierung</string>
     <string name="kategorien">Kategorien</string>
     <string name="willkommen_bei_bike_walk">Willkommen bei Bike + walk</string>
+
+    <string name="categoryPicture">Category Picture</string>
 
 </resources>

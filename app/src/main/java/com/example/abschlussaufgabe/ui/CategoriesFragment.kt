@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentCategoriesBinding
-import com.example.abschlussaufgabe.databinding.FragmentHomeBinding
 
 
 class CategoriesFragment : Fragment() {
