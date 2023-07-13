@@ -6,4 +6,5 @@
     <color name="button">#F6B664</color>
     <color name="btn_registieren">#F6B664</color>
     <color name="backgroundhome">#40C4FF</color>
+    <color name="reg_background">#838080</color>
 </resources>
