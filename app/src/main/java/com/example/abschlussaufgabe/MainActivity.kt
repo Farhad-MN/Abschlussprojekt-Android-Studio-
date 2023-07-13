@@ -1,19 +1,24 @@
 package com.example.abschlussaufgabe
 
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 
-import androidx.navigation.findNavController
-import com.example.abschlussaufgabe.ui.HomeFragment
-import com.example.abschlussaufgabe.ui.PlanenFragment
-import com.google.android.material.bottomnavigation.BottomNavigationItemView
 
 class MainActivity : AppCompatActivity() {
 
     //lateinit var bottomNav:BottomNavigationItemView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            val w = window
+            w.setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+            )
+        }
+
         setContentView(R.layout.activity_main)
 
     }

@@ -10,9 +10,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="525dp"
-        android:layout_margin="10dp"
         android:backgroundTint="@color/backgroundhome">
-
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -20,9 +18,8 @@
 
             <ImageView
                 android:id="@+id/iv_home"
-                android:layout_width="369dp"
-                android:layout_height="509dp"
-                android:layout_margin="9dp"
+                android:layout_width="400dp"
+                android:layout_height="525dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
