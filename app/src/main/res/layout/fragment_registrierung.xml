@@ -43,21 +43,22 @@
             android:layout_height="661dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.833"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintVertical_bias="0.0">
 
             <EditText
                 android:id="@+id/editText_Vorname"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_marginTop="80dp"
-                android:background="#838080"
+                android:layout_marginTop="40dp"
+                android:background="@color/reg_background"
                 android:ems="10"
+                android:hint="Vorname"
                 android:inputType="text|textAutoComplete"
-                android:text="Vorname"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,10 +67,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
-                android:background="#838080"
+                android:background="@color/reg_background"
                 android:ems="10"
+                android:hint="Nachname"
                 android:inputType="text"
-                android:text="Nachname"
                 app:layout_constraintEnd_toEndOf="@+id/editText_Vorname"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/editText_Vorname"
@@ -80,8 +81,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
-                android:background="#838080"
+                android:background="@color/reg_background"
                 android:ems="10"
+                android:hint="Adresse"
                 android:inputType="textPostalAddress"
                 app:layout_constraintEnd_toEndOf="@+id/editText_nachname"
                 app:layout_constraintStart_toStartOf="@+id/editText_nachname"
@@ -92,8 +94,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
-                android:background="#838080"
+                android:background="@color/reg_background"
                 android:ems="10"
+                android:hint="Emailddress"
                 android:inputType="textEmailAddress"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextPostalAddress2"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextPostalAddress2"
@@ -104,24 +107,51 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
-                android:background="#838080"
+                android:background="@color/reg_background"
                 android:ems="10"
+                android:hint="Phonenummber"
                 android:inputType="phone"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_konterstellen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="120dp"
+                android:layout_marginBottom="60dp"
                 android:backgroundTint="@color/button"
                 android:text="Kontoerstellen"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/reg_background"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="Password"
+                app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
+                app:layout_constraintStart_toStartOf="@+id/editTextPhone"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/reg_background"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="Password Wiederholen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

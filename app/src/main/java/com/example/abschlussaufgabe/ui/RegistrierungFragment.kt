@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentRegistrierungBinding
+
 
 class RegistrierungFragment:Fragment() {
 
@@ -19,5 +21,12 @@ class RegistrierungFragment:Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_registrierung,container,false)
         return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        binding.btnKonterstellen.setOnClickListener {
+            val navController = binding.frameLayout2.findNavController()
+            navController.navigate(RegistrierungFragmentDirections.actionRegistrierungFragment2ToHomeFragment())
+        }
     }
 }
