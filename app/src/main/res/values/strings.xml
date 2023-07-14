@@ -16,4 +16,8 @@
 
     <string name="categoryPicture">Category Picture</string>
 
+    <string name="anmelden_01">Anmelden mit Google</string>
+    <string name="anmelden_02">Anmelden mit Facebook</string>
+    <string name="anmelden_03">Anmelden mit Instagram</string>
+
 </resources>

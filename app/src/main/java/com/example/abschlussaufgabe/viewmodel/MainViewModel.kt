@@ -8,6 +8,9 @@ class MainViewModel: ViewModel() {
     private val repository = AppRepository()
 
     val categories = repository.category
+
     val homeImages = repository.homeImages
+
+
 
 }

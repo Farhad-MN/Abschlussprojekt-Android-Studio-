@@ -39,6 +39,13 @@ class LoginFragment:Fragment() {
             navController.navigate(LoginFragmentDirections.actionLoginFragment2ToRegistrierungFragment2())
         }
 
+        binding.tvMedienAccount.setOnClickListener {
+            val navController = binding.frameLayout.findNavController()
+            navController.navigate(LoginFragmentDirections.actionLoginFragment2ToRegisMediFragment())
+        }
+
+
+
 
     }
 

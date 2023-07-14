@@ -30,7 +30,7 @@
             android:id="@+id/textView2"
             android:layout_width="263dp"
             android:layout_height="90dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="24dp"
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="@string/willkommen_bei_bike_walk"
@@ -44,11 +44,11 @@
         <EditText
             android:id="@+id/tv_Email"
             android:layout_width="240dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/background"
+            android:background="@color/reg_background"
             android:ems="10"
             android:hint="mailadresse@muster.com"
             android:inputType="text"
@@ -60,12 +60,13 @@
         <EditText
             android:id="@+id/tv_Password"
             android:layout_width="240dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="passwort eingeben"
             android:inputType="textPassword"
             android:textColor="@color/white"
+            android:background="@color/reg_background"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="@+id/tv_Email"
             app:layout_constraintStart_toStartOf="@+id/tv_Email"
@@ -84,42 +85,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_Password" />
 
-        <ImageButton
-            android:id="@+id/btn_Facebook"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="55dp"
-
-            android:layout_marginBottom="144dp"
-            android:backgroundTint="@color/white"
-            android:src="@drawable/frame_2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageButton
-            android:id="@+id/btn_Instagram"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="70dp"
-            android:background="#1DFFFFFF"
-            android:src="@drawable/insta"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_Facebook"
-            app:layout_constraintStart_toEndOf="@+id/btn_Facebook"
-            app:layout_constraintTop_toTopOf="@+id/btn_Facebook"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageButton
-            android:id="@+id/btn_Google"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="70dp"
-            android:background="#79FFFFFF"
-            android:src="@drawable/google_plus_1"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_Instagram"
-            app:layout_constraintStart_toEndOf="@+id/btn_Instagram"
-            app:layout_constraintTop_toTopOf="@+id/btn_Instagram"
-            app:layout_constraintVertical_bias="0.0" />
-
         <Button
             android:id="@+id/btn_Register"
             android:layout_width="wrap_content"
@@ -130,6 +95,45 @@
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:text="Haben Sie breit eine Konto?"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/tv_Email"
+            app:layout_constraintStart_toStartOf="@+id/tv_Email" />
+
+        <TextView
+            android:id="@+id/tv_medien_Account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="180dp"
+            android:text="Sie können auch mit soziale Medien sich Anmelden!"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Sie haben noch kein Konto?"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
