@@ -43,10 +43,6 @@ class LoginFragment:Fragment() {
             val navController = binding.frameLayout.findNavController()
             navController.navigate(LoginFragmentDirections.actionLoginFragment2ToRegisMediFragment())
         }
-
-
-
-
     }
 
 }

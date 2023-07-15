@@ -6,12 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentProfilBinding
+import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
 class ProfilFragment: Fragment() {
 
     private lateinit var binding: FragmentProfilBinding
+
+    private val mainViewModel: MainViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

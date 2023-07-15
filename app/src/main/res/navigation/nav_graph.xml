@@ -89,7 +89,11 @@
         android:id="@+id/categoriesFragment"
         android:name="com.example.abschlussaufgabe.ui.CategoriesFragment"
         android:label="fragment_categories"
-        tools:layout="@layout/fragment_categories" />
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.abschlussaufgabe.ui.DetailFragment"
