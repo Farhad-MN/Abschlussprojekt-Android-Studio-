@@ -3,9 +3,11 @@ package com.example.abschlussaufgabe.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.data.model.Category
 import com.example.abschlussaufgabe.databinding.ItemCateoriesBinding
+import com.example.abschlussaufgabe.ui.CategoriesFragmentDirections
 
 class CategoryAdapter (
     private val context: Context,
@@ -30,5 +32,16 @@ class CategoryAdapter (
 
         holder.binding.tvName.text=context.resources.getString(category.name)
         holder.binding.ivSport.setImageResource(category.imageId)
+
+
+
+
+
+
+
+        holder.binding.categoryCard.setOnClickListener {
+            holder.binding.categoryCard.findNavController()
+                .navigate(CategoriesFragmentDirections.actionCategoriesFragmentToDetailFragment())
+        }
     }
 }

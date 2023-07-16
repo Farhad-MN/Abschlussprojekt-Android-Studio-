@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import com.example.abschlussaufgabe.R
+import com.example.abschlussaufgabe.adapter.CategoryAdapter
 import com.example.abschlussaufgabe.databinding.FragmentDetailBinding
 import com.example.abschlussaufgabe.databinding.FragmentLoginBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
@@ -27,6 +28,13 @@ class DetailFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login,container,false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        mainViewModel.categories.observe(viewLifecycleOwner){
+            binding.rvRoute.adapter = CategoryAdapter(requireContext(),it)
+        }
     }
 
 }
