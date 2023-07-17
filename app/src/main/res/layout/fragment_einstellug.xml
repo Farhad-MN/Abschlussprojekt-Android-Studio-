@@ -14,18 +14,37 @@
         android:background="@color/background"
         tools:context=".ui.EinstellungFragment">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar4"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:background="@color/btn_registieren"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
             android:text="Einstellung"
-            android:textSize="24dp"
-            android:textStyle="bold"
             android:textColor="@color/black"
+            android:textSize="34sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/toolbar4"
+            app:layout_constraintTop_toTopOf="@+id/toolbar4" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

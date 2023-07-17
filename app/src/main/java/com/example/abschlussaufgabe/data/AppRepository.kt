@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Category
+import kotlinx.coroutines.delay
 
 class AppRepository {
 
@@ -13,9 +14,15 @@ class AppRepository {
 
      var homeImages = mutableListOf<Int>()
 
+    //var einstellungList = mutableListOf<String>()
+
+
+
+
     init {
         loadCategory()
         loadImages()
+        //loadEinstellung()
     }
 
     fun loadCategory(){
@@ -44,5 +51,15 @@ class AppRepository {
             R.drawable.rv_bild_11,
         )
     }
+    /*fun loadEinstellung(){
+        einstellungList = mutableListOf(
+            "Account",
+            "Mitteilungen          ->",
+            "Profil-Info           ->",
+            "Privatsphäre          ->",
+            "App-Einstellungen     ->",
+            "Live-Tracking         ->"
+        )
+    }*/
 
 }

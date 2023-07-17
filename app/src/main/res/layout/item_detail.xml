@@ -24,10 +24,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="61dp"
                 android:text="TextView"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scroll_detail" />
+                tools:layout_editor_absoluteY="289dp" />
 
             <TextView
                 android:id="@+id/tv_detail02"
@@ -61,26 +60,17 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
-            <ScrollView
-                android:id="@+id/scroll_detail"
-                android:layout_width="390dp"
-                android:layout_height="220dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:scaleX="1"
-                android:scaleY="1"
+            <ImageView
+                android:id="@+id/iv_router"
+                android:layout_width="wrap_content"
+                android:layout_height="242dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="3dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/tour_route" />
 
-
-                <ImageView
-                    android:id="@+id/iv_detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/tour_route" />
-            </ScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 

@@ -13,18 +13,6 @@
         <action
             android:id="@+id/action_homeFragment_to_categoriesFragment"
             app:destination="@id/categoriesFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_planenFragment"
-            app:destination="@id/planenFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_aufzeichnenFragment"
-            app:destination="@id/aufzeichnenFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_profilFragment"
-            app:destination="@id/profilFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_einstellugFragment"
-            app:destination="@id/einstellugFragment" />
     </fragment>
     <fragment
         android:id="@+id/planenFragment"
@@ -35,29 +23,17 @@
         android:id="@+id/aufzeichnenFragment"
         android:name="com.example.abschlussaufgabe.ui.AufzeichnenFragment"
         android:label="fragment_aufzeichnen"
-        tools:layout="@layout/fragment_aufzeichnen" >
-        <action
-            android:id="@+id/action_aufzeichnenFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_aufzeichnen" />
     <fragment
         android:id="@+id/profilFragment"
         android:name="com.example.abschlussaufgabe.ui.ProfilFragment"
         android:label="fragment_profil"
-        tools:layout="@layout/fragment_profil" >
-        <action
-            android:id="@+id/action_profilFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_profil" />
     <fragment
         android:id="@+id/einstellugFragment"
         android:name="com.example.abschlussaufgabe.ui.EinstellungFragment"
         android:label="fragment_einstellug"
-        tools:layout="@layout/fragment_einstellug" >
-        <action
-            android:id="@+id/action_einstellugFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_einstellug" />
     <fragment
         android:id="@+id/loginFragment2"
         android:name="com.example.abschlussaufgabe.ui.LoginFragment"
@@ -98,7 +74,17 @@
         android:id="@+id/detailFragment"
         android:name="com.example.abschlussaufgabe.ui.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <argument
+            android:name="name"
+            app:argType="integer" />
+        <argument
+            android:name="imageId"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/regisMediFragment"
         android:name="com.example.abschlussaufgabe.ui.RegisMediFragment"

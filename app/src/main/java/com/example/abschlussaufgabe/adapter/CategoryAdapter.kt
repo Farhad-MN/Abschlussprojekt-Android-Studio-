@@ -9,6 +9,7 @@ import com.example.abschlussaufgabe.data.model.Category
 import com.example.abschlussaufgabe.databinding.ItemCateoriesBinding
 import com.example.abschlussaufgabe.ui.CategoriesFragmentDirections
 
+
 class CategoryAdapter (
     private val context: Context,
     private val dataset: List<Category>
@@ -34,14 +35,14 @@ class CategoryAdapter (
         holder.binding.ivSport.setImageResource(category.imageId)
 
 
-
-
-
-
-
         holder.binding.categoryCard.setOnClickListener {
             holder.binding.categoryCard.findNavController()
-                .navigate(CategoriesFragmentDirections.actionCategoriesFragmentToDetailFragment())
+                .navigate(CategoriesFragmentDirections.actionCategoriesFragmentToDetailFragment(dataset[position].id,dataset[position].name,dataset[position].imageId))
         }
+
+
+
+
+
     }
 }
