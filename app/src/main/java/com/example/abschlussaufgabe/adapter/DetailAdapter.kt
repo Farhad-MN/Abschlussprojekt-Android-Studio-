@@ -6,17 +6,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.data.model.Category
 import com.example.abschlussaufgabe.databinding.ItemCateoriesBinding
+import com.example.abschlussaufgabe.databinding.ItemDetailBinding
 
 class DetailAdapter(
-    private val context: Context,
-    private val dataset: List<Category>
+    private val dataset: MutableList<Int>
 ) : RecyclerView.Adapter<DetailAdapter.ItemviewHolder>() {
 
 
-    class ItemviewHolder(val binding: ItemCateoriesBinding) : RecyclerView.ViewHolder(binding.root)
+    class ItemviewHolder(val binding: ItemDetailBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemviewHolder {
-        val binding = ItemCateoriesBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding = ItemDetailBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ItemviewHolder(binding)
     }
 
@@ -26,8 +26,12 @@ class DetailAdapter(
 
     override fun onBindViewHolder(holder: ItemviewHolder, position: Int) {
 
-        val router = dataset[position]
 
+        val detailsImage = dataset[position]
+        //holder.binding.tvDetail01.text = context.getString(detailsImage.name)
+        //holder.binding.tvDetail02.text = context.getString(detailsImage.name)
+        //holder.binding.tvDetail03.text = context.getString(detailsImage.name)
+        holder.binding.ivRouter.setImageResource(detailsImage)
 
 
 

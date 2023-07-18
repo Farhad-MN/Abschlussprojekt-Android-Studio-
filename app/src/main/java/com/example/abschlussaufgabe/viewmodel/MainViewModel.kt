@@ -11,6 +11,10 @@ class MainViewModel: ViewModel() {
 
     val homeImages = repository.homeImages
 
+    val detailsImages = repository.detailImages
+
+    val settingsListes = repository.settingListes
+
 
 
 }

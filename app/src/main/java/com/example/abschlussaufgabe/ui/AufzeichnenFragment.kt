@@ -20,4 +20,9 @@ class AufzeichnenFragment: Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_aufzeichnen,container,false)
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.spinner
+    }
 }

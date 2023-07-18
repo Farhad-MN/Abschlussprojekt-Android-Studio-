@@ -12,6 +12,12 @@ import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentRegistrierungBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
+    var vorname =""
+    var nachname = ""
+    var adresse = ""
+    var emailAdresse = ""
+    var Phonenummber = ""
+    var passWord = ""
 
 class RegistrierungFragment:Fragment() {
 

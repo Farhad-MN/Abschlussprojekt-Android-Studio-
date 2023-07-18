@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Category
-import kotlinx.coroutines.delay
 
 class AppRepository {
 
@@ -14,7 +13,9 @@ class AppRepository {
 
      var homeImages = mutableListOf<Int>()
 
-    //var einstellungList = mutableListOf<String>()
+    var detailImages = mutableListOf<Int>()
+
+    var settingListes = mutableListOf<Int>()
 
 
 
@@ -22,7 +23,24 @@ class AppRepository {
     init {
         loadCategory()
         loadImages()
-        //loadEinstellung()
+        loadSetting()
+        loadDetail()
+    }
+
+
+    fun loadDetail(){
+
+        detailImages = mutableListOf(
+            R.drawable.tour_route,
+            R.drawable.tour_route,
+            R.drawable.tour_route,
+            R.drawable.tour_route,
+            R.drawable.tour_route,
+            R.drawable.tour_route,
+            R.drawable.tour_route,
+            R.drawable.tour_route,
+            R.drawable.tour_route,
+        )
     }
 
     fun loadCategory(){
@@ -51,15 +69,25 @@ class AppRepository {
             R.drawable.rv_bild_11,
         )
     }
-    /*fun loadEinstellung(){
-        einstellungList = mutableListOf(
-            "Account",
-            "Mitteilungen          ->",
-            "Profil-Info           ->",
-            "Privatsphäre          ->",
-            "App-Einstellungen     ->",
-            "Live-Tracking         ->"
+    fun loadSetting(){
+        settingListes = mutableListOf(
+
+            R.string.setting_01,
+            R.string.setting_02,
+            R.string.setting_03,
+            R.string.setting_04,
+            R.string.setting_05,
+            R.string.setting_06,
+            R.string.setting_07,
+            R.string.setting_08,
+            R.string.setting_09,
+            R.string.setting_10,
+            R.string.setting_11,
+            R.string.setting_12,
+            R.string.setting_13,
+            R.string.setting_14,
+
         )
-    }*/
+    }
 
 }

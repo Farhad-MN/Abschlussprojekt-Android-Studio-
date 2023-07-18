@@ -96,7 +96,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@color/reg_background"
                 android:ems="10"
-                android:hint="Emailddress"
+                android:hint="EmailAdresse"
                 android:inputType="textEmailAddress"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextPostalAddress2"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextPostalAddress2"

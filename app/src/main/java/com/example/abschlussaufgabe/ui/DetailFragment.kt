@@ -8,23 +8,17 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import com.example.abschlussaufgabe.R
-import com.example.abschlussaufgabe.adapter.CategoryAdapter
 import com.example.abschlussaufgabe.adapter.DetailAdapter
 import com.example.abschlussaufgabe.databinding.FragmentDetailBinding
-import com.example.abschlussaufgabe.databinding.FragmentLoginBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
 
 class DetailFragment : Fragment() {
 
 
-
     private lateinit var binding: FragmentDetailBinding
 
     private val mainViewModel: MainViewModel by activityViewModels()
-
-    private var tourDetail:Long = 0
-
 
 
     override fun onCreateView(
@@ -32,15 +26,16 @@ class DetailFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login,container,false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        mainViewModel.categories.observe(viewLifecycleOwner){
-            binding.rvRoute.adapter = DetailAdapter(requireContext(),(it))
-        }
+
+        binding.rvRoute.adapter = DetailAdapter(mainViewModel.detailsImages)
+
     }
 
 }

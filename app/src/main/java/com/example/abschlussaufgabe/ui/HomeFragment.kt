@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
-import com.example.abschlussaufgabe.adapter.SportAdapter
+import com.example.abschlussaufgabe.adapter.HomeAdapter
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentHomeBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
@@ -16,7 +16,9 @@ import com.example.abschlussaufgabe.viewmodel.MainViewModel
 class HomeFragment: Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+
     private val mainViewModel: MainViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,7 +31,7 @@ class HomeFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding.rvImages.adapter = SportAdapter(mainViewModel.homeImages)
+        binding.rvImages.adapter = HomeAdapter(mainViewModel.homeImages)
 
 
         binding.btnKategorie.setOnClickListener {

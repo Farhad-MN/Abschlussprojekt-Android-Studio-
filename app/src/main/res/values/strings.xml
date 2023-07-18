@@ -20,4 +20,22 @@
     <string name="anmelden_02">Anmelden mit Facebook</string>
     <string name="anmelden_03">Anmelden mit Instagram</string>
 
+
+    <string name="setting_01">Mitteilungen</string>
+    <string name="setting_02">Profil-Info</string>
+    <string name="setting_03">Privatsphäre</string>
+    <string name="setting_04">App-Einstellungen</string>
+    <string name="setting_05">Live-Tracking</string>
+    <string name="setting_06">Facebook</string>
+    <string name="setting_07">Instagram</string>
+    <string name="setting_08">Google</string>
+    <string name="setting_09">Apple Health</string>
+    <string name="setting_10">Bluetooth Connect</string>
+    <string name="setting_11">Garmin Connect</string>
+    <string name="setting_12">Feedback + Hilfe</string>
+    <string name="setting_13">App bewerten</string>
+    <string name="setting_14">Rechtliches</string>
+
 </resources>
+
+

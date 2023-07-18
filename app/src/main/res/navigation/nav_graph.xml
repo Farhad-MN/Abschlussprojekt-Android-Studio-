@@ -85,10 +85,12 @@
             android:name="imageId"
             app:argType="integer" />
     </fragment>
+
     <fragment
         android:id="@+id/regisMediFragment"
         android:name="com.example.abschlussaufgabe.ui.RegisMediFragment"
-        android:label="RegisMediFragment" >
+        android:label="RegisMediFragment"
+        tools:layout="@layout/fragment_regis_medi">
         <action
             android:id="@+id/action_regisMediFragment_to_homeFragment"
             app:destination="@id/homeFragment" />

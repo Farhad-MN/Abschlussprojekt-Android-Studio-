@@ -27,6 +27,11 @@ class ProfilFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.tvVorname.setText(vorname)
+        binding.tvNachname.setText(id)
+        binding.tvAdresse.setText(id)
+        binding.tvEmail.setText(id)
+        binding.tvNumber.setText(id)
 
 
 

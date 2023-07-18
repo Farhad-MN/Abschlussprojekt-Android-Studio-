@@ -30,6 +30,7 @@ class CategoriesFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         mainViewModel.categories.observe(viewLifecycleOwner) {
             binding.rvSport.adapter = CategoryAdapter(requireContext(),it)
