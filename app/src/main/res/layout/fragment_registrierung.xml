@@ -109,7 +109,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@color/reg_background"
                 android:ems="10"
-                android:hint="Phonenummber"
+                android:hint="Phonenumber"
                 android:inputType="phone"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"

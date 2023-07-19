@@ -18,7 +18,7 @@ class CategoriesFragment : Fragment() {
 
     private lateinit var binding: FragmentCategoriesBinding
 
-    private val mainViewModel: MainViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,7 +32,7 @@ class CategoriesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mainViewModel.categories.observe(viewLifecycleOwner) {
+        viewModel.categories.observe(viewLifecycleOwner) {
             binding.rvSport.adapter = CategoryAdapter(requireContext(),it)
         }
 

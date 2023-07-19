@@ -1,25 +1,31 @@
 package com.example.abschlussaufgabe
 
-import android.os.Build
+
 import android.os.Bundle
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI.setupWithNavController
+import com.example.abschlussaufgabe.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
-    //lateinit var bottomNav:BottomNavigationItemView
+    private lateinit var navController: NavController
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            val w = window
-            w.setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-            )
-        }
 
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+
+        val navHostFragment = supportFragmentManager.findFragmentById(binding.fragmentContainerView.id)as NavHostFragment
+        navController = navHostFragment.navController
+
+        val bottomNav = binding.bottomNavigationBar
+        setupWithNavController(bottomNav,navController)
+
+
 
     }
 
@@ -29,9 +35,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-/* val navController = findNavController(R.id.navHost)
-        findViewById<BottomNavigationItemView>(R.id.bottomNav)
-            .setupWithNavController(navController)*/
+
 
 
 

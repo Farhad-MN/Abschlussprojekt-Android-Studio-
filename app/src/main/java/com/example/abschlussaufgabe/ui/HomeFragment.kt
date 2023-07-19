@@ -17,7 +17,7 @@ class HomeFragment: Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
 
-    private val mainViewModel: MainViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,7 +31,7 @@ class HomeFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding.rvImages.adapter = HomeAdapter(mainViewModel.homeImages)
+        binding.rvImages.adapter = HomeAdapter(viewModel.homeImages)
 
 
         binding.btnKategorie.setOnClickListener {

@@ -16,7 +16,7 @@ import com.example.abschlussaufgabe.viewmodel.MainViewModel
     var nachname = ""
     var adresse = ""
     var emailAdresse = ""
-    var Phonenummber = ""
+    var phonenummber = ""
     var passWord = ""
 
 class RegistrierungFragment:Fragment() {
@@ -36,6 +36,13 @@ class RegistrierungFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         binding.btnKonterstellen.setOnClickListener {
+            vorname = binding.editTextVorname.text.toString()
+            nachname = binding. editTextNachname.text.toString()
+            adresse = binding.editTextTextPostalAddress2.text.toString()
+            emailAdresse = binding.editTextTextEmailAddress.text.toString()
+            phonenummber = binding.editTextPhone.text.toString()
+            passWord = binding.editTextTextPassword.toString()
+
             val navController = binding.frameLayout2.findNavController()
             navController.navigate(RegistrierungFragmentDirections.actionRegistrierungFragment2ToHomeFragment())
         }

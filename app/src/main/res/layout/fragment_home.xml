@@ -14,19 +14,6 @@
         android:layout_height="match_parent"
         tools:context=".ui.HomeFragment">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="#5B5A5A"
-            app:backgroundTint="@color/white"
-            app:elevation="10dp"
-            app:itemIconSize="40dp"
-            app:labelVisibilityMode="unlabeled"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/menu_bottom_navigation" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -52,17 +39,17 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_images"
-            android:layout_width="wrap_content"
-            android:layout_height="499dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.078"
             app:spanCount="1"
-            tools:itemCount="11"
             tools:listitem="@layout/item_home" />
 
 

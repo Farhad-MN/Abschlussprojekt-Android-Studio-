@@ -20,7 +20,7 @@
 
             <ImageView
                 android:id="@+id/iv_home"
-                android:layout_width="391dp"
+                android:layout_width="match_parent"
                 android:layout_height="522dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

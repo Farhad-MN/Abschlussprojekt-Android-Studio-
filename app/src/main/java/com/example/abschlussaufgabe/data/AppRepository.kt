@@ -23,7 +23,7 @@ class AppRepository {
     init {
         loadCategory()
         loadImages()
-        loadSetting()
+        loadSettings()
         loadDetail()
     }
 
@@ -69,7 +69,7 @@ class AppRepository {
             R.drawable.rv_bild_11,
         )
     }
-    fun loadSetting(){
+    fun loadSettings(){
         settingListes = mutableListOf(
 
             R.string.setting_01,

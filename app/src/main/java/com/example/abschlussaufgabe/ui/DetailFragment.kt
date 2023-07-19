@@ -18,7 +18,7 @@ class DetailFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
 
-    private val mainViewModel: MainViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -34,7 +34,7 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding.rvRoute.adapter = DetailAdapter(mainViewModel.detailsImages)
+        binding.rvRoute.adapter = DetailAdapter(viewModel.detailsImages)
 
     }
 

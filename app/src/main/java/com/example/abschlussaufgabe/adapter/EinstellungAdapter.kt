@@ -25,8 +25,8 @@ class EinstellungAdapter (
 
     override fun onBindViewHolder(holder: ItemviewHolder, position: Int) {
 
-        val setting = dataset[position]
-        holder.binding.tvName.text = context.resources.getString(setting)
+        val settinges = dataset[position]
+        holder.binding.tvName.text = context.resources.getString(settinges)
     }
 
 

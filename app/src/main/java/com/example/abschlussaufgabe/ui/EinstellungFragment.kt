@@ -17,7 +17,7 @@ class EinstellungFragment: Fragment() {
 
     private lateinit var binding: FragmentEinstellugBinding
 
-    private val mainViewModel: MainViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,9 +30,9 @@ class EinstellungFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        mainViewModel.categories.observe(viewLifecycleOwner){
-            //binding.rvEinstellung.adapter = EinstellungAdapter(requireContext(),it)
-        }
+
+            binding.rvEinstellung.adapter = EinstellungAdapter(requireContext(),viewModel.settingsListes)
+
 
     }
 }
