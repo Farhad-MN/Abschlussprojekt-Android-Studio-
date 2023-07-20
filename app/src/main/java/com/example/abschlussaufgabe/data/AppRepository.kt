@@ -17,6 +17,8 @@ class AppRepository {
 
     var settingListes = mutableListOf<Int>()
 
+    var profilImages = mutableListOf<Int>()
+
 
 
 
@@ -25,9 +27,14 @@ class AppRepository {
         loadImages()
         loadSettings()
         loadDetail()
+        loadProfil()
     }
 
-
+    fun loadProfil(){
+        profilImages = mutableListOf(
+            R.drawable.recommend
+        )
+    }
     fun loadDetail(){
 
         detailImages = mutableListOf(

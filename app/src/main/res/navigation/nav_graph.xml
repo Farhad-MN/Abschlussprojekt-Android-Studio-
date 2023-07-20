@@ -28,7 +28,11 @@
         android:id="@+id/profilFragment"
         android:name="com.example.abschlussaufgabe.ui.ProfilFragment"
         android:label="fragment_profil"
-        tools:layout="@layout/fragment_profil" />
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_profilFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
     <fragment
         android:id="@+id/einstellugFragment"
         android:name="com.example.abschlussaufgabe.ui.EinstellungFragment"
@@ -97,5 +101,14 @@
         <action
             android:id="@+id/action_regisMediFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.abschlussaufgabe.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
     </fragment>
 </navigation>

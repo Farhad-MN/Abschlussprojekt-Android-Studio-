@@ -1,5 +1,6 @@
 package com.example.abschlussaufgabe.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,8 +31,10 @@ class EinstellungFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        binding.rvEinstellung.adapter = EinstellungAdapter(requireContext(),viewModel.settingsListes)
 
-            binding.rvEinstellung.adapter = EinstellungAdapter(requireContext(),viewModel.settingsListes)
+
+
 
 
     }

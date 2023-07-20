@@ -15,6 +15,8 @@ class MainViewModel: ViewModel() {
 
     val settingsListes = repository.settingListes
 
+    val profilImages = repository.profilImages
+
 
 
 }
