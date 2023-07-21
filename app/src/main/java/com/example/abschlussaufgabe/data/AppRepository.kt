@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Category
 
-
 class AppRepository {
 
     private val _category = MutableLiveData<List<Category>>()
@@ -33,7 +32,7 @@ class AppRepository {
 
     fun loadProfil(){
         profilImages = mutableListOf(
-            //R.drawable
+            R.drawable.recommend
         )
     }
     fun loadDetail(){
