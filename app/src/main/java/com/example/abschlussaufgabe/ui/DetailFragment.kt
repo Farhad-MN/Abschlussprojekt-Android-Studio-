@@ -16,6 +16,7 @@ import com.example.abschlussaufgabe.viewmodel.MainViewModel
 class DetailFragment : Fragment() {
 
 
+
     private lateinit var binding: FragmentDetailBinding
 
     private val viewModel: MainViewModel by activityViewModels()

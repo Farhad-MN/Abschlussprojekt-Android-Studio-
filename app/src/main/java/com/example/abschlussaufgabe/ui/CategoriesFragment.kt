@@ -14,6 +14,7 @@ import com.example.abschlussaufgabe.databinding.FragmentCategoriesBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
 
+
 class CategoriesFragment : Fragment() {
 
     private lateinit var binding: FragmentCategoriesBinding

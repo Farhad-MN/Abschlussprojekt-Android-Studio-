@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentProfilBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
@@ -15,7 +16,7 @@ class ProfilFragment: Fragment() {
 
     private lateinit var binding: FragmentProfilBinding
 
-    private val mainViewModel: MainViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -26,12 +27,16 @@ class ProfilFragment: Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.tvVorname.setText(vorname)
-        binding.tvNachname.setText(nachname)
-        binding.tvAdresse.setText(adresse)
-        binding.tvEmail.setText(emailAdresse)
-        binding.tvNumber.setText(id)
+
+
+
+
+        binding.btnProfilBearbeiten.setOnClickListener {
+            val navController = binding.profilLayout.findNavController()
+            navController.navigate(ProfilFragmentDirections.actionProfilFragmentToEditFragment())
+        }
+
+
 
 
 

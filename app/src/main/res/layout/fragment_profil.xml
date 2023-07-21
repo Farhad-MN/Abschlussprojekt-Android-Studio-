@@ -8,114 +8,11 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profilLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background">
 
-        <EditText
-            android:id="@+id/tv_nachname"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="28dp"
-            android:background="@color/reg_background"
-            android:ems="10"
-            android:hint="Nachname"
-            android:inputType="text|textAutoComplete"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="@+id/tv_vorname"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_vorname" />
-
-        <EditText
-            android:id="@+id/tv_vorname"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/reg_background"
-            android:ems="10"
-            android:hint="Vorname"
-            android:inputType="text|textAutoComplete"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_profil" />
-
-
-        <EditText
-            android:id="@+id/tv_adresse"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="28dp"
-            android:background="@color/reg_background"
-            android:ems="10"
-            android:hint="Adresse"
-            android:inputType="text|textAutoComplete"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="@+id/tv_nachname"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nachname" />
-
-
-        <EditText
-            android:id="@+id/tv_email"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="28dp"
-            android:background="@color/reg_background"
-            android:ems="10"
-            android:hint="EmailAdresse"
-            android:inputType="text|textAutoComplete"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="@+id/tv_adresse"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_adresse" />
-
-
-        <EditText
-            android:id="@+id/tv_number"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="28dp"
-            android:background="@color/reg_background"
-            android:ems="10"
-            android:hint="Phonenumber"
-            android:inputType="text|textAutoComplete"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="@+id/tv_email"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
-
-        <EditText
-            android:id="@+id/tv_password"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="28dp"
-            android:background="@color/reg_background"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="text|textAutoComplete"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="@+id/tv_email"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_number" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar5"
@@ -133,9 +30,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Profil"
+            android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="normal"
-            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
             app:layout_constraintEnd_toEndOf="@+id/toolbar5"
             app:layout_constraintStart_toStartOf="@+id/toolbar5"
@@ -143,8 +40,8 @@
 
         <ImageView
             android:id="@+id/iv_profil"
-            android:layout_width="189dp"
-            android:layout_height="184dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_marginTop="8dp"
             android:scaleX="0.9"
             android:scaleY="0.9"
@@ -152,6 +49,77 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar5"
             app:srcCompat="@drawable/profil_image" />
+
+        <ImageButton
+            android:id="@+id/btn_profilBearbeiten"
+            android:layout_width="37dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="45dp"
+            android:backgroundTint="@color/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar5"
+            app:srcCompat="@drawable/baseline_mode_24" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profil Bearbeiten"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_profilBearbeiten"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="@+id/btn_profilBearbeiten"
+            app:layout_constraintTop_toBottomOf="@+id/btn_profilBearbeiten" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar6"
+            android:layout_width="409dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_profil" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Letzte Aktivtäten"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar6"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar6" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar6">
+
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:fillViewport="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/activ1" />
+        </ScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

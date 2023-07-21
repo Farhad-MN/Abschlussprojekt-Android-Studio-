@@ -1,11 +1,8 @@
 package com.example.abschlussaufgabe.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.abschlussaufgabe.data.model.Category
-import com.example.abschlussaufgabe.databinding.ItemCateoriesBinding
 import com.example.abschlussaufgabe.databinding.ItemDetailBinding
 
 class DetailAdapter(

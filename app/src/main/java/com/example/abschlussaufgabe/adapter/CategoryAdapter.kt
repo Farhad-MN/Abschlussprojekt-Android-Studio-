@@ -9,7 +9,6 @@ import com.example.abschlussaufgabe.data.model.Category
 import com.example.abschlussaufgabe.databinding.ItemCateoriesBinding
 import com.example.abschlussaufgabe.ui.CategoriesFragmentDirections
 
-
 class CategoryAdapter (
     private val context: Context,
     private val dataset: List<Category>

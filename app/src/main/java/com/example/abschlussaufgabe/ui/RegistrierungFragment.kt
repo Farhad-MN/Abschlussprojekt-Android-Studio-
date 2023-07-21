@@ -25,6 +25,7 @@ class RegistrierungFragment:Fragment() {
 
     private val mainViewModel: MainViewModel by activityViewModels()
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

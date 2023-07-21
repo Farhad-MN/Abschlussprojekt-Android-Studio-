@@ -21,4 +21,5 @@ class PlanenFragment: Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_planen,container,false)
         return binding.root
     }
+
 }

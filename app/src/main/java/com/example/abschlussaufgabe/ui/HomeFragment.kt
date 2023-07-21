@@ -19,6 +19,7 @@ class HomeFragment: Fragment() {
 
     private val viewModel: MainViewModel by activityViewModels()
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,6 +33,7 @@ class HomeFragment: Fragment() {
 
 
         binding.rvImages.adapter = HomeAdapter(viewModel.homeImages)
+
 
 
         binding.btnKategorie.setOnClickListener {

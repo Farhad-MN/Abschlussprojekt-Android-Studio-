@@ -2,6 +2,7 @@ package com.example.abschlussaufgabe.adapter
 
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -27,6 +28,16 @@ class EinstellungAdapter (
 
         val settinges = dataset[position]
         holder.binding.tvName.text = context.resources.getString(settinges)
+
+        holder.binding.btnIndex.setOnClickListener {
+
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.putExtra(Intent.EXTRA_TEXT, "Momentan ist in bearbeitung!!!")
+            intent.type = "text/plain"
+            val shareIntent = Intent.createChooser(intent, null)
+
+            context.startActivity(shareIntent)
+        }
     }
 
 
