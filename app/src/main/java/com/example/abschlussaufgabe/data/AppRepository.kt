@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Category
+import kotlinx.coroutines.delay
 
 class AppRepository {
 
@@ -23,12 +24,15 @@ class AppRepository {
 
 
     init {
+
         loadCategory()
         loadImages()
         loadSettings()
         loadDetail()
         loadProfil()
     }
+
+
 
     fun loadProfil(){
         profilImages = mutableListOf(
