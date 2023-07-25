@@ -83,7 +83,6 @@
             android:background="@color/white"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_profil" />
@@ -101,24 +100,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/toolbar6" />
 
-        <ScrollView
-            android:id="@+id/scrollView2"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_profile"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:fillViewport="true"
+            app:spanCount="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar6">
-
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:fillViewport="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/activ1" />
-        </ScrollView>
+            app:layout_constraintTop_toBottomOf="@+id/toolbar6" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

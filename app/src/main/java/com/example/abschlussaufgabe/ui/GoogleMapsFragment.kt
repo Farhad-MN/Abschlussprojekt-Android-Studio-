@@ -33,6 +33,9 @@ class GoogleMapsFragment : Fragment() {
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
     }
 
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
