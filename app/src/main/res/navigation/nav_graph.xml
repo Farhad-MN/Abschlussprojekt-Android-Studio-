@@ -104,7 +104,7 @@
     </fragment>
     <fragment
         android:id="@+id/editFragment"
-        android:name="com.example.abschlussaufgabe.EditFragment"
+        android:name="com.example.abschlussaufgabe.ui.EditFragment"
         android:label="fragment_edit"
         tools:layout="@layout/fragment_edit" >
         <action
@@ -118,7 +118,7 @@
         tools:layout="@layout/fragment_start" />
     <fragment
         android:id="@+id/googleMapsFragment"
-        android:name="com.example.abschlussaufgabe.ui.GoogleMapsFragment"
+        android:name="com.example.abschlussaufgabe.googleMap.GoogleMapsFragment"
         android:label="fragment_google_maps"
         tools:layout="@layout/fragment_google_maps" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.abschlussaufgabe
+package com.example.abschlussaufgabe.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,14 +8,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentEditBinding
-import com.example.abschlussaufgabe.databinding.FragmentProfilBinding
-import com.example.abschlussaufgabe.ui.adresse
-import com.example.abschlussaufgabe.ui.emailAdresse
-import com.example.abschlussaufgabe.ui.nachname
-import com.example.abschlussaufgabe.ui.passWord
-import com.example.abschlussaufgabe.ui.phonenummber
-import com.example.abschlussaufgabe.ui.vorname
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
 class EditFragment : Fragment() {
