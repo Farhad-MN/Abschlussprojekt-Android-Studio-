@@ -10,12 +10,10 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.abschlussaufgabe.databinding.ActivityMainBinding
-import com.example.abschlussaufgabe.googleMap.PlacesReader
-import com.example.abschlussaufgabe.googleMap.data.Place
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
-import kotlinx.coroutines.delay
+
 
 
 
