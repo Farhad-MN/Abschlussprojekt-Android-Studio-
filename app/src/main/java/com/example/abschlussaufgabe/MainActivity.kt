@@ -51,13 +51,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        viewModel.loading.observe(this) {
-            if (it) {
-                binding.spinner.visibility = View.VISIBLE
-            } else {
-                binding.spinner.visibility = View.GONE
-            }
-        }
+
 
 
     }

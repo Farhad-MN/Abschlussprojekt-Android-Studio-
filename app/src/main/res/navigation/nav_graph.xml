@@ -45,7 +45,8 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment2_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_loginFragment2_to_registrierungFragment2"
             app:destination="@id/registrierungFragment2" />
@@ -96,11 +97,8 @@
         android:label="RegisMediFragment"
         tools:layout="@layout/fragment_regis_medi">
         <action
-            android:id="@+id/action_regisMediFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_regisMediFragment_to_loginFragment2"
-            app:destination="@id/loginFragment2" />
+            android:id="@+id/action_regisMediFragment_to_mediaLoginFragment"
+            app:destination="@id/mediaLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/editFragment"
@@ -121,4 +119,12 @@
         android:name="com.example.abschlussaufgabe.googleMap.GoogleMapsFragment"
         android:label="fragment_google_maps"
         tools:layout="@layout/fragment_google_maps" />
+    <fragment
+        android:id="@+id/mediaLoginFragment"
+        android:name="com.example.abschlussaufgabe.ui.MediaLoginFragment"
+        android:label="MediaLoginFragment" >
+        <action
+            android:id="@+id/action_mediaLoginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
