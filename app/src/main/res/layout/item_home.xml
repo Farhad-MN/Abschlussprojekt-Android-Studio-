@@ -10,25 +10,26 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        >
+        android:layout_height="520dp"
+        android:background="@color/background"
+        android:backgroundTint="@color/background">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/background">
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:backgroundTint="@color/background">
 
             <ImageView
                 android:id="@+id/iv_home"
                 android:layout_width="match_parent"
-                android:layout_height="522dp"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:backgroundTint="@color/background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/rv_bild_01" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

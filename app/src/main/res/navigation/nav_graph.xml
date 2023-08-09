@@ -97,8 +97,8 @@
         android:label="RegisMediFragment"
         tools:layout="@layout/fragment_regis_medi">
         <action
-            android:id="@+id/action_regisMediFragment_to_mediaLoginFragment"
-            app:destination="@id/mediaLoginFragment" />
+            android:id="@+id/action_regisMediFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/editFragment"
@@ -119,12 +119,4 @@
         android:name="com.example.abschlussaufgabe.googleMap.GoogleMapsFragment"
         android:label="fragment_google_maps"
         tools:layout="@layout/fragment_google_maps" />
-    <fragment
-        android:id="@+id/mediaLoginFragment"
-        android:name="com.example.abschlussaufgabe.ui.MediaLoginFragment"
-        android:label="MediaLoginFragment" >
-        <action
-            android:id="@+id/action_mediaLoginFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
 </navigation>
