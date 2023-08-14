@@ -53,17 +53,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:navGraph="@navigation/nav_graph" />
 
-        <ProgressBar
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_bar"
-            app:layout_constraintEnd_toEndOf="@+id/fragment_container_view"
-            app:layout_constraintStart_toStartOf="@+id/fragment_container_view"
-            app:layout_constraintTop_toTopOf="@+id/fragment_container_view" />
-
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

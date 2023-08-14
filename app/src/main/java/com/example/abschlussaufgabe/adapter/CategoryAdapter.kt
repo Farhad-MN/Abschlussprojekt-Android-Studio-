@@ -36,7 +36,8 @@ class CategoryAdapter (
 
         holder.binding.categoryCard.setOnClickListener {
             holder.binding.categoryCard.findNavController()
-                .navigate(CategoriesFragmentDirections.actionCategoriesFragmentToDetailFragment(dataset[position].id,dataset[position].name,dataset[position].imageId))
+                .navigate(CategoriesFragmentDirections.actionCategoriesFragmentToDetailFragment
+                    (dataset[position].id,dataset[position].name,dataset[position].imageId))
         }
 
 

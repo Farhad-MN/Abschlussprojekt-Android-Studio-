@@ -20,6 +20,7 @@ class MainViewModel: ViewModel() {
 
     init {
         loadNewImage()
+
     }
     fun loadNewImage() {
         viewModelScope.launch(Dispatchers.IO) {
@@ -27,11 +28,6 @@ class MainViewModel: ViewModel() {
             _loading.postValue(false)
         }
     }
-    suspend fun loadSpinner() {
-        delay(5000)
-    }
-
-
 
     val categories = repository.category
 

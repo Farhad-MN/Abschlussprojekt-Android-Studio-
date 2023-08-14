@@ -47,6 +47,16 @@
     <string name="login_failed">"Login failed"</string>
 
 
+    <string-array name="sport_array">
+        <item>Mountainbike</item>
+        <item>Wandern</item>
+        <item>Fahrrad</item>
+        <item>Bikepacking</item>
+        <item>Rennrad</item>
+        <item>Laufen</item>
+    </string-array>
+
+
 
 
 </resources>
