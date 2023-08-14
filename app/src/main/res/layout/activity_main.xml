@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,10 +12,8 @@
         tools:context=".MainActivity">
 
 
-
-        <fragment
+        <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
             android:id="@+id/map_fragment"
-            xmlns:map="http://schemas.android.com/apk/res-auto"
             class="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -24,7 +21,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            map:mapId="YOUR_MAP_ID"/>
+            map:mapId="YOUR_MAP_ID" />
 
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
