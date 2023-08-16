@@ -21,6 +21,10 @@ class CategoriesFragment : Fragment() {
 
     private val viewModel: MainViewModel by activityViewModels()
 
+    override fun onStart() {
+        super.onStart()
+        viewModel.loadCategories()
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,7 +38,7 @@ class CategoriesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.categories.observe(viewLifecycleOwner) {
-            binding.rvSport.adapter = CategoryAdapter(requireContext(),it)
+            //binding.rvSport.adapter = CategoryAdapter(requireContext(),it)
         }
 
 
