@@ -44,7 +44,7 @@ class PlDetailFragment : Fragment() {
             spinner1.adapter = arrayAdapter
         }
 
-        val spinner2: Spinner = binding.spinnerActivity
+        val spinner2: Spinner = binding.spinnerFitness
         ArrayAdapter.createFromResource(
             this.requireContext(),
             R.array.fitness_level,
