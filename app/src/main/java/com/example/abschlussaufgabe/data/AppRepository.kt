@@ -1,16 +1,23 @@
 package com.example.abschlussaufgabe.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Category
-import kotlinx.coroutines.delay
+import com.example.abschlussaufgabe.data.model.ResultCategoryInner
+import com.example.abschlussaufgabe.data.remote.CategoryApi
+import java.lang.Exception
 
-class AppRepository {
+const val TAG = "AppRepository"
 
-    private val _category = MutableLiveData<List<Category>>()
-    val category: LiveData<List<Category>>
-        get() = _category
+class AppRepository(private val api: CategoryApi) {
+
+
+
+
+
+
 
      var homeImages = mutableListOf<Int>()
 
@@ -20,18 +27,15 @@ class AppRepository {
 
     var profilImages = mutableListOf<Int>()
 
-
-
+    var spinnerListes = mutableListOf<Int>()
 
     init {
 
-        loadCategory()
         loadImages()
         loadSettings()
-        loadDetail()
         loadProfil()
-    }
 
+    }
 
 
     fun loadProfil(){
@@ -39,33 +43,8 @@ class AppRepository {
             R.drawable.recommend
         )
     }
-    fun loadDetail(){
 
-        detailImages = mutableListOf(
-            R.drawable.tour_route,
-            R.drawable.tour_route,
-            R.drawable.tour_route,
-            R.drawable.tour_route,
-            R.drawable.tour_route,
-            R.drawable.tour_route,
-            R.drawable.tour_route,
-            R.drawable.tour_route,
-            R.drawable.tour_route,
-        )
-    }
-
-    fun loadCategory(){
-        _category.value = listOf(
-
-            Category(1, R.string.category_01,R.drawable.mtb_01),
-            Category(2, R.string.category_02,R.drawable.wandern_02),
-            Category(3, R.string.category_03,R.drawable.fahrrad_03),
-            Category(4, R.string.category_04,R.drawable.bikepacking_04),
-            Category(5, R.string.category_05,R.drawable.rennrad_05),
-            Category(6, R.string.category_06,R.drawable.laufen_06)
-        )
-    }
-    fun loadImages(){
+   fun loadImages(){
         homeImages = mutableListOf(
             R.drawable.rv_bild_01,
             R.drawable.rv_bild_02,
@@ -99,6 +78,15 @@ class AppRepository {
             R.string.setting_14,
 
         )
+    }
+    suspend fun getCategories():List<ResultCategoryInner>{
+        return try {
+            api.retrofitService.getCategories().category
+        } catch (e:Exception){
+            Log.e(TAG, "Error loading Data from API: $e")
+            emptyList()
+        }
+
     }
 
 }
