@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentAufzeichnenBinding
 
-
 class AufzeichnenFragment: Fragment() {
 
     private lateinit var binding: FragmentAufzeichnenBinding

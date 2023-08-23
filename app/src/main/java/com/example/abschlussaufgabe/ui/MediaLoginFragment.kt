@@ -12,7 +12,8 @@ import com.example.abschlussaufgabe.databinding.FragmentMediaLoginBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
 
-class MediaLoginFragment : Fragment() {
+class
+MediaLoginFragment : Fragment() {
 
     private lateinit var binding: FragmentMediaLoginBinding
 
@@ -28,7 +29,6 @@ class MediaLoginFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
 
     }
 

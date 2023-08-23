@@ -23,7 +23,6 @@ class PlanenFragment: Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_planen,container,false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

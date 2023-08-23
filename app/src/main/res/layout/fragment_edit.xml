@@ -7,8 +7,6 @@
 
     </data>
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/profilBearbeiten"
         android:layout_width="match_parent"

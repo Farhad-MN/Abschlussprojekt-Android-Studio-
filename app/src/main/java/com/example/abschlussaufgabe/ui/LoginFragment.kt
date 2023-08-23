@@ -8,7 +8,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentLoginBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
@@ -18,6 +17,7 @@ class LoginFragment:Fragment() {
     private lateinit var binding: FragmentLoginBinding
 
     private val mainViewModel: MainViewModel by activityViewModels()
+
 
 
     override fun onCreateView(
