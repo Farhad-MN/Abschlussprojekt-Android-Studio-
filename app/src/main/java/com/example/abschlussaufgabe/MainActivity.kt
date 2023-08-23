@@ -2,7 +2,6 @@ package com.example.abschlussaufgabe
 
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -11,8 +10,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.abschlussaufgabe.databinding.ActivityMainBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.SupportMapFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,8 +31,6 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNav = binding.bottomNavigationBar
         setupWithNavController(bottomNav,navController)
-
-
 
     }
 

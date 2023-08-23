@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.abschlussaufgabe.data.AppRepository
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainViewModel: ViewModel() {
@@ -27,9 +26,7 @@ class MainViewModel: ViewModel() {
             _loading.postValue(false)
         }
     }
-    suspend fun loadSpinner() {
-        delay(5000)
-    }
+
 
 
 
