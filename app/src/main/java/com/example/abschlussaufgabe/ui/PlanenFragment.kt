@@ -6,15 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.databinding.FragmentPlanenBinding
+import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
 
 class PlanenFragment: Fragment() {
 
     private lateinit var binding: FragmentPlanenBinding
+
+    private val viewModel: MainViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

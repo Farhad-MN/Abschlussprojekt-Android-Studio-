@@ -30,8 +30,6 @@ class ProfilFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 
-
-
         binding.btnProfilBearbeiten.setOnClickListener {
             val navController = binding.profilLayout.findNavController()
             navController.navigate(ProfilFragmentDirections.actionProfilFragmentToEditFragment())
