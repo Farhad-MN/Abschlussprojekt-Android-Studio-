@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
-import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Category
 import com.example.abschlussaufgabe.databinding.ItemCateoriesBinding
 import com.example.abschlussaufgabe.ui.CategoriesFragmentDirections
@@ -30,15 +28,15 @@ class CategoryAdapter (
 
     override fun onBindViewHolder(holder:ItemViewHolder, position: Int) {
 
-        val item = dataset[position]
+        val category = dataset[position]
 
-        holder.binding.tvName.text= item.name
-        //holder.binding.ivSport.load(item.image)
+        holder.binding.tvName.text=context.resources.getString(category.name)
+        holder.binding.ivSport.setImageResource(category.imageId)
 
 
         holder.binding.categoryCard.setOnClickListener {
-            holder.binding.categoryCard.findNavController().navigate(R.id.action_categoriesFragment_to_detailFragment)
-
+            holder.binding.categoryCard.findNavController()
+                .navigate(CategoriesFragmentDirections.actionCategoriesFragmentToDetailFragment(dataset[position].id,dataset[position].name,dataset[position].imageId))
         }
 
 

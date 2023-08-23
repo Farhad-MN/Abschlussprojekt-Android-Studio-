@@ -77,34 +77,6 @@
     </string-array>
 
 
-    <string-array name="sport_array">
-        <item>Mountainbike</item>
-        <item>Wandern</item>
-        <item>Fahrrad</item>
-        <item>Bikepacking</item>
-        <item>Rennrad</item>
-        <item>Laufen</item>
-    </string-array>
-
-
-    <string-array name="sport_activity">
-        <item>Mountainbike</item>
-        <item>Wandern</item>
-        <item>Fahrrad</item>
-        <item>Bikepacking</item>
-        <item>Rennrad</item>
-        <item>Laufen</item>
-    </string-array>
-
-    <string-array name="fitness_level">
-        <item>Untrainiert</item>
-        <item>Durchschnittlich</item>
-        <item>Gut in Form</item>
-        <item>Sehr sportlich</item>
-        <item>Profil</item>
-    </string-array>
-
-
 </resources>
 
 
