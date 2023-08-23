@@ -15,8 +15,6 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
 
 
-
-
 class MainActivity : AppCompatActivity() {
 
 
@@ -24,22 +22,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private val viewModel: MainViewModel by viewModels()
-    private fun addMarkers(googleMap: GoogleMap) {}
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-        val mapFragment = supportFragmentManager.findFragmentById(
-            R.id.map_fragment
-        ) as? SupportMapFragment
-        mapFragment?.getMapAsync { googleMap ->
-            addMarkers(googleMap)
-        }
-
-
-
 
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
@@ -51,14 +37,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-
     }
-
-
-
-
 
 
 }
@@ -68,11 +47,3 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-/*private fun loadFragment(fragment:Fragment){
-    val transaction = supportFragmentManager.beginTransaction()
-    transaction.replace(com.google.android.material.R.id.container,fragment)
-    transaction.commit()
-
-}*/

@@ -18,7 +18,11 @@
         android:id="@+id/planenFragment"
         android:name="com.example.abschlussaufgabe.ui.PlanenFragment"
         android:label="fragment_planen"
-        tools:layout="@layout/fragment_planen" />
+        tools:layout="@layout/fragment_planen" >
+        <action
+            android:id="@+id/action_planenFragment_to_plDetailFragment"
+            app:destination="@id/plDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/aufzeichnenFragment"
         android:name="com.example.abschlussaufgabe.ui.AufzeichnenFragment"
@@ -110,13 +114,12 @@
             app:destination="@id/profilFragment" />
     </fragment>
     <fragment
-        android:id="@+id/startFragment"
-        android:name="com.example.abschlussaufgabe.ui.StartFragment"
-        android:label="fragment_start"
-        tools:layout="@layout/fragment_start" />
-    <fragment
-        android:id="@+id/googleMapsFragment"
-        android:name="com.example.abschlussaufgabe.googleMap.GoogleMapsFragment"
-        android:label="fragment_google_maps"
-        tools:layout="@layout/fragment_google_maps" />
+        android:id="@+id/plDetailFragment"
+        android:name="com.example.abschlussaufgabe.ui.PlDetailFragment"
+        android:label="fragment_pl_detail"
+        tools:layout="@layout/fragment_pl_detail" >
+        <action
+            android:id="@+id/action_plDetailFragment_to_planenFragment"
+            app:destination="@id/planenFragment" />
+    </fragment>
 </navigation>

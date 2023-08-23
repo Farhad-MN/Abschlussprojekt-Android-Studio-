@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/planenlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.PlDetailFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tour Planen"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar7" />
+
+        <Spinner
+            android:id="@+id/spinner_activity"
+            style="@android:style/Widget.Spinner"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar7" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            style="@android:style/Widget.Spinner"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_activity"
+            app:layout_constraintStart_toStartOf="@+id/spinner_activity"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_activity" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar8"
+            android:layout_width="320dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/spinner3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/spinner3"
+            app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/reg_background"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar8"
+            app:layout_constraintStart_toStartOf="@+id/toolbar8"
+            app:layout_constraintTop_toTopOf="@+id/toolbar8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Wähle eine Standpunkt"
+                android:textColor="@color/white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/reg_background"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar8"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar8"
+            app:layout_constraintStart_toStartOf="@+id/toolbar8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Wo soll´s hingehen"
+                android:textColor="@color/white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="A:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintEnd_toStartOf="@+id/textInputLayout"
+            app:layout_constraintTop_toTopOf="@+id/textInputLayout" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="B:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout2"
+            app:layout_constraintEnd_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toTopOf="@+id/textInputLayout2" />
+
+        <Button
+            android:id="@+id/btn_speicher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:backgroundTint="@color/button"
+            android:text="Speichern"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

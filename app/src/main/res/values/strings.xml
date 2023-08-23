@@ -46,6 +46,36 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
+    //todo spinner1
+    <string-array name="sport_catecory">
+        <item>Mountainbike</item>
+        <item>Wandern</item>
+        <item>Fahrrad</item>
+        <item>Bikepacking</item>
+        <item>Rennrad</item>
+        <item>Laufen</item>
+    </string-array>
+
+    //todo spinner2
+    <string-array name="sport_activity">
+        <item>Mountainbike</item>
+        <item>Wandern</item>
+        <item>Fahrrad</item>
+        <item>Bikepacking</item>
+        <item>Rennrad</item>
+        <item>Laufen</item>
+    </string-array>
+
+
+    //todo spinner3
+    <string-array name="fitness_level">
+        <item>Untrainiert</item>
+        <item>Durchschnittlich</item>
+        <item>Gut in Form</item>
+        <item>Sehr sportlich</item>
+        <item>Profil</item>
+    </string-array>
+
 
 </resources>
 
