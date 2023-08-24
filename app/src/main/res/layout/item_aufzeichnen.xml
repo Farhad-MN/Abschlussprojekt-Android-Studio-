@@ -20,7 +20,7 @@
             android:layout_height="355dp">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/iv_Natur"
                 android:layout_width="345dp"
                 android:layout_height="220dp"
                 android:layout_marginTop="16dp"
@@ -41,7 +41,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintTop_toBottomOf="@+id/iv_Natur" />
 
             <TextView
                 android:id="@+id/tv_Name"

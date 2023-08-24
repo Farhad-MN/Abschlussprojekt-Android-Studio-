@@ -1,34 +1,33 @@
 package com.example.abschlussaufgabe.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.abschlussaufgabe.data.AppRepository
-import kotlinx.coroutines.Dispatchers
+import com.example.abschlussaufgabe.data.remote.NaturApi
 import kotlinx.coroutines.launch
 
 class MainViewModel: ViewModel() {
 
-    private val repository = AppRepository()
+    private val repository = AppRepository(NaturApi)
 
 
-    private val _loading = MutableLiveData<Boolean>(false)
+    /*private val _loading = MutableLiveData<Boolean>(false)
     val loading: LiveData<Boolean>
-        get() = _loading
+        get() = _loading*/
 
     init {
-        loadNewImage()
+       // loadNewImage()
+        getResults()
     }
-    fun loadNewImage() {
+    /*fun loadNewImage() {
         viewModelScope.launch(Dispatchers.IO) {
             _loading.postValue(true)
             _loading.postValue(false)
         }
-    }
+    }*/
 
 
-
+    val pictures = repository.pictures
 
     val categories = repository.category
 
@@ -39,6 +38,13 @@ class MainViewModel: ViewModel() {
     val settingsListes = repository.settingListes
 
     val profilImages = repository.profilImages
+
+    fun getResults(){
+        viewModelScope.launch {
+            repository.getResults()
+        }
+
+    }
 
 
 

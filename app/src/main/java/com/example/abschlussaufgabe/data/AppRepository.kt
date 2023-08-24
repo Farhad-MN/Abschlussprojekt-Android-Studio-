@@ -1,12 +1,20 @@
 package com.example.abschlussaufgabe.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.data.model.Category
-import kotlinx.coroutines.delay
+import com.example.abschlussaufgabe.data.model.Pictures
+import com.example.abschlussaufgabe.data.remote.NaturApi
 
-class AppRepository {
+class AppRepository(private val api: NaturApi) {
+
+
+    private val _naturListe = MutableLiveData<List<Pictures>>()
+    val pictures: LiveData<List<Pictures>>
+        get() = _naturListe
+
 
     private val _category = MutableLiveData<List<Category>>()
     val category: LiveData<List<Category>>
@@ -99,6 +107,14 @@ class AppRepository {
             R.string.setting_14,
 
         )
+    }
+
+    suspend fun getResults(){
+        try {
+           _naturListe.value = NaturApi.retrofitService.getResults().data
+        }catch (e: Exception) {
+            Log.e("AppRepository", "${e}")
+        }
     }
 
 }

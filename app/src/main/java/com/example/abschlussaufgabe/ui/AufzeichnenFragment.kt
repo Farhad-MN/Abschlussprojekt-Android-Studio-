@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.abschlussaufgabe.R
+import com.example.abschlussaufgabe.adapter.ApiAdapter
 import com.example.abschlussaufgabe.databinding.FragmentAufzeichnenBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
@@ -28,6 +29,11 @@ class AufzeichnenFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.pictures.observe(viewLifecycleOwner) {pictures ->
+            binding.rvPictures.adapter = ApiAdapter(pictures)
+
+        }
 
     }
 }
