@@ -117,4 +117,5 @@ class AppRepository(private val api: NaturApi) {
         }
     }
 
+
 }

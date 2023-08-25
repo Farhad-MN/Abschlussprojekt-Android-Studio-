@@ -10,22 +10,10 @@ class MainViewModel: ViewModel() {
 
     private val repository = AppRepository(NaturApi)
 
-
-    /*private val _loading = MutableLiveData<Boolean>(false)
-    val loading: LiveData<Boolean>
-        get() = _loading*/
-
     init {
        // loadNewImage()
         getResults()
     }
-    /*fun loadNewImage() {
-        viewModelScope.launch(Dispatchers.IO) {
-            _loading.postValue(true)
-            _loading.postValue(false)
-        }
-    }*/
-
 
     val pictures = repository.pictures
 

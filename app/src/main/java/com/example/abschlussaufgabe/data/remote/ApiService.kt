@@ -38,7 +38,8 @@ interface ApiService {
     @GET("species-list?key=sk-Sd7u64e3219ac4c461939")
     suspend fun getResults():Natur
 
-    //@GET("q")
+    /*@GET("species-list?key=sk-Sd7u64e3219ac4c461939")
+    suspend fun getSearch(@Query("q=monstera")category:String):Natur*/
 
 }
 object NaturApi {
