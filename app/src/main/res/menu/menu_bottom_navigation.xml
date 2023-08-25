@@ -11,7 +11,7 @@
         android:title="Planen" />
     <item
         android:id="@+id/aufzeichnenFragment"
-        android:icon="@drawable/baseline_adjust_24"
+        android:icon="@drawable/baseline_grass_24"
         android:title="Aufzeichnen" />
     <item
         android:id="@+id/profilFragment"

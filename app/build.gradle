@@ -66,7 +66,9 @@ dependencies {
     // Coil
     implementation "io.coil-kt:coil:1.1.1"
 
-
+// Room Dependencies
+    implementation("androidx.room:room-runtime:2.5.2")
+    implementation("androidx.room:room-ktx:2.5.2")
 
 
 

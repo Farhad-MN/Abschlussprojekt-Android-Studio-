@@ -100,7 +100,7 @@
             app:layout_constraintTop_toTopOf="@+id/toolbar6" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_profile"
+            android:id="@+id/rv_galerie"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:spanCount="1"

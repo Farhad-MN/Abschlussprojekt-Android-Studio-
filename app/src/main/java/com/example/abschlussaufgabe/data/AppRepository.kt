@@ -11,25 +11,26 @@ import com.example.abschlussaufgabe.data.remote.NaturApi
 class AppRepository(private val api: NaturApi) {
 
 
-    private val _naturListe = MutableLiveData<List<Pictures>>()
+
+
+    private val _pictures = MutableLiveData<List<Pictures>>()
     val pictures: LiveData<List<Pictures>>
-        get() = _naturListe
+        get() = _pictures
+
+
 
 
     private val _category = MutableLiveData<List<Category>>()
     val category: LiveData<List<Category>>
         get() = _category
 
-     var homeImages = mutableListOf<Int>()
+    var homeImages = mutableListOf<Int>()
 
     var detailImages = mutableListOf<Int>()
 
     var settingListes = mutableListOf<Int>()
 
     var profilImages = mutableListOf<Int>()
-
-
-
 
     init {
 
@@ -41,13 +42,13 @@ class AppRepository(private val api: NaturApi) {
     }
 
 
-
-    fun loadProfil(){
+    fun loadProfil() {
         profilImages = mutableListOf(
             R.drawable.recommend
         )
     }
-    fun loadDetail(){
+
+    fun loadDetail() {
 
         detailImages = mutableListOf(
             R.drawable.tour_route,
@@ -62,18 +63,19 @@ class AppRepository(private val api: NaturApi) {
         )
     }
 
-    fun loadCategory(){
+    fun loadCategory() {
         _category.value = listOf(
 
-            Category(1, R.string.category_01,R.drawable.mtb_01),
-            Category(2, R.string.category_02,R.drawable.wandern_02),
-            Category(3, R.string.category_03,R.drawable.fahrrad_03),
-            Category(4, R.string.category_04,R.drawable.bikepacking_04),
-            Category(5, R.string.category_05,R.drawable.rennrad_05),
-            Category(6, R.string.category_06,R.drawable.laufen_06)
+            Category(1, R.string.category_01, R.drawable.mtb_01),
+            Category(2, R.string.category_02, R.drawable.wandern_02),
+            Category(3, R.string.category_03, R.drawable.fahrrad_03),
+            Category(4, R.string.category_04, R.drawable.bikepacking_04),
+            Category(5, R.string.category_05, R.drawable.rennrad_05),
+            Category(6, R.string.category_06, R.drawable.laufen_06)
         )
     }
-    fun loadImages(){
+
+    fun loadImages() {
         homeImages = mutableListOf(
             R.drawable.rv_bild_01,
             R.drawable.rv_bild_02,
@@ -88,7 +90,8 @@ class AppRepository(private val api: NaturApi) {
             R.drawable.rv_bild_11,
         )
     }
-    fun loadSettings(){
+
+    fun loadSettings() {
         settingListes = mutableListOf(
 
             R.string.setting_01,
@@ -106,16 +109,18 @@ class AppRepository(private val api: NaturApi) {
             R.string.setting_13,
             R.string.setting_14,
 
-        )
+            )
     }
 
-    suspend fun getResults(){
+    suspend fun getResults() {
         try {
-           _naturListe.value = NaturApi.retrofitService.getResults().data
-        }catch (e: Exception) {
+            _pictures.value = NaturApi.retrofitService.getResults().data
+        } catch (e: Exception) {
             Log.e("AppRepository", "${e}")
         }
     }
+
+
 
 
 }

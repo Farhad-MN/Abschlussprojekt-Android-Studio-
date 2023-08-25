@@ -1,19 +1,25 @@
 package com.example.abschlussaufgabe.viewmodel
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.abschlussaufgabe.data.AppRepository
 import com.example.abschlussaufgabe.data.remote.NaturApi
 import kotlinx.coroutines.launch
 
-class MainViewModel: ViewModel() {
+class MainViewModel(application: Application): AndroidViewModel(application) {
 
     private val repository = AppRepository(NaturApi)
 
+    //val favouritetListe = repository.favouritetListe
+
+
     init {
-       // loadNewImage()
+
         getResults()
+
     }
+
 
     val pictures = repository.pictures
 
@@ -33,6 +39,7 @@ class MainViewModel: ViewModel() {
         }
 
     }
+
 
 
 

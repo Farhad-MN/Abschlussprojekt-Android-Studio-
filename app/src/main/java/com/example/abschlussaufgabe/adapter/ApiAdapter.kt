@@ -22,11 +22,14 @@ class ApiAdapter(
 
         val item = dataset[position]
 
-        val imageUri = item.defaultImage!!.regularURL.toUri().buildUpon().scheme("https").build()
+        val imageUri = item.defaultImage!!.mediumURL.toUri().buildUpon().scheme("https").build()
         holder.binding.ivNatur.load(imageUri)
 
         holder.binding.tvName.text = item.scientificName.firstOrNull().toString()
-        holder.binding.tvTittel.text = item.otherName.firstOrNull().toString()
+
+        if (item.otherName.size != 0 ){
+            holder.binding.tvTittel.text = item.otherName.firstOrNull().toString()
+        }
         holder.binding.ivNatur.load(imageUri)
 
 
