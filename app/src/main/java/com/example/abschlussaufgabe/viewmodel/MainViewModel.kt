@@ -11,7 +11,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
     private val repository = AppRepository(NaturApi)
 
-    //val favouritetListe = repository.favouritetListe
+
 
 
     init {

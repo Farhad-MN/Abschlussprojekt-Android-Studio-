@@ -10,15 +10,12 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="520dp"
-        android:background="@color/background"
-        android:backgroundTint="@color/background">
+        android:layout_height="520dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background"
-            android:backgroundTint="@color/background">
+            android:layout_height="match_parent"
+            android:background="@color/black">
 
             <ImageView
                 android:id="@+id/iv_home"

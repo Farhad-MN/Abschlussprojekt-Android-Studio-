@@ -3,7 +3,7 @@ package com.example.abschlussaufgabe.data.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "natur_table")
+@Entity(tableName = "favourite_table")
 data class Favourite(
 
     @PrimaryKey

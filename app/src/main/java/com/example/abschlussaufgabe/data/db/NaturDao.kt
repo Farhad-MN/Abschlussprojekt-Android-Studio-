@@ -15,12 +15,12 @@ interface NaturDao {
     suspend fun insert(favourite: Favourite)
 
 
-    @Query("SELECT * FROM natur_table")
+    @Query("SELECT * FROM favourite_table")
     suspend fun getAll(): LiveData<List<Favourite>>
 
 
 
-    @Query("DELETE FROM natur_table WHERE id = :id")
+    @Query("DELETE FROM favourite_table WHERE id = :id")
     suspend fun deleteById(id: Int)
 
 
