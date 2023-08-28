@@ -29,9 +29,13 @@ class AufzeichnenFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.pictures.observe(viewLifecycleOwner) {pictures ->
-            binding.rvPictures.adapter = ApiAdapter(pictures)
+            binding.rvPictures.adapter = ApiAdapter(pictures,viewModel)
 
         }
+
+
+
+
 
     }
 }

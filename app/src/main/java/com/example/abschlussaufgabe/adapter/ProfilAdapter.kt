@@ -7,6 +7,7 @@ import com.example.abschlussaufgabe.databinding.ItemHomeBinding
 
 class ProfilAdapter (
     private val dataset: MutableList<Int>
+
 ) : RecyclerView.Adapter<ProfilAdapter.ItemViewHolder> (){
 
 

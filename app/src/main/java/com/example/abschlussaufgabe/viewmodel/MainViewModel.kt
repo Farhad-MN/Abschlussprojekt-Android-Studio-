@@ -4,24 +4,30 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.abschlussaufgabe.data.AppRepository
+import com.example.abschlussaufgabe.data.db.MyDatabase
+import com.example.abschlussaufgabe.data.model.Picture
 import com.example.abschlussaufgabe.data.remote.NaturApi
 import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application): AndroidViewModel(application) {
 
-    private val repository = AppRepository(NaturApi)
 
+
+    private val repository = AppRepository(NaturApi,MyDatabase.getDatabase(application))
 
 
 
     init {
-
+        repository.getAllPicture()
+        repository.getAllItem()
+        repository.getCount()
+        repository.prepopulateDB()
         getResults()
 
     }
 
 
-    val pictures = repository.pictures
+    val pictures = repository.picture
 
     val categories = repository.category
 
@@ -38,6 +44,12 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
             repository.getResults()
         }
 
+    }
+
+    fun insertPicture(picture: Picture){
+        viewModelScope.launch{
+            repository.insertPicture(picture)
+        }
     }
 
 

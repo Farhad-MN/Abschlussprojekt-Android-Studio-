@@ -122,4 +122,8 @@
             android:id="@+id/action_plDetailFragment_to_planenFragment"
             app:destination="@id/planenFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/appartmentFragment"
+        android:name="com.example.abschlussaufgabe.ui.AppartmentFragment"
+        android:label="AppartmentFragment" />
 </navigation>

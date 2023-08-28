@@ -4,18 +4,30 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.abschlussaufgabe.R
+import com.example.abschlussaufgabe.data.db.AppartmentData
+import com.example.abschlussaufgabe.data.db.MyDatabase
+import com.example.abschlussaufgabe.data.exampleData.AppartmentsExampleData
 import com.example.abschlussaufgabe.data.model.Category
-import com.example.abschlussaufgabe.data.model.Pictures
+import com.example.abschlussaufgabe.data.model.Picture
 import com.example.abschlussaufgabe.data.remote.NaturApi
 
-class AppRepository(private val api: NaturApi) {
+class AppRepository(private val api: NaturApi, private val database: MyDatabase) {
 
 
+    fun getAllPicture(): LiveData<List<Picture>> {
+        return database.pictureDao.getAllPictures()
+    }
+    fun insertPicture(picture: Picture){
+        return database.pictureDao.insertPicture(picture)
+    }
 
+    fun getAllItem(): List<AppartmentData> {
+        return database.appartmentDao.getAllItem()
+    }
 
-    private val _pictures = MutableLiveData<List<Pictures>>()
-    val pictures: LiveData<List<Pictures>>
-        get() = _pictures
+    private val _picture = MutableLiveData<List<Picture>>()
+    val picture: LiveData<List<Picture>>
+        get() = _picture
 
 
 
@@ -112,12 +124,39 @@ class AppRepository(private val api: NaturApi) {
             )
     }
 
+
     suspend fun getResults() {
         try {
-            _pictures.value = NaturApi.retrofitService.getResults().data
+            _picture.value = NaturApi.retrofitService.getResults().data
         } catch (e: Exception) {
             Log.e("AppRepository", "${e}")
         }
+    }
+
+    //Anzahl der Items in der Tabelle zählen
+    //@return Anzahl der Items der Tabelle
+    fun getCount():Int {
+        return database.appartmentDao.getCount()
+    }
+
+    //Funktion um Beispielwerte und Daten von der API bei leerer Datenbank in diese einzufügen
+    fun prepopulateDB() {
+
+        try {
+            if(database.appartmentDao.getCount()==0){
+
+                database.appartmentDao.insertItem(AppartmentsExampleData.appartment1)
+                database.appartmentDao.insertItem(AppartmentsExampleData.appartment2)
+                database.appartmentDao.insertItem(AppartmentsExampleData.appartment3)
+                database.appartmentDao.insertItem(AppartmentsExampleData.appartment4)
+                database.appartmentDao.insertItem(AppartmentsExampleData.appartment5)
+                database.appartmentDao.insertItem(AppartmentsExampleData.appartment6)
+                database.appartmentDao.insertItem(AppartmentsExampleData.appartment7)
+                database.appartmentDao.insertItem(AppartmentsExampleData.appartment8)
+
+            }
+
+        }catch (e: Exception) { }
     }
 
 

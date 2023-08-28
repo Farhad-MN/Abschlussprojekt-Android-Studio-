@@ -5,11 +5,14 @@ import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.abschlussaufgabe.data.model.Pictures
+import com.example.abschlussaufgabe.data.model.Picture
 import com.example.abschlussaufgabe.databinding.ItemAufzeichnenBinding
+import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
 class ApiAdapter(
-    private val dataset: List<Pictures>
+    private val dataset: List<Picture>,
+    private val viewModel: MainViewModel
+
 ): RecyclerView.Adapter<ApiAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(val binding: ItemAufzeichnenBinding) : RecyclerView.ViewHolder(binding.root)
@@ -30,7 +33,13 @@ class ApiAdapter(
         if (item.otherName.size != 0 ){
             holder.binding.tvTittel.text = item.otherName.firstOrNull().toString()
         }
-        holder.binding.ivNatur.load(imageUri)
+
+        holder.binding.btnSave.setOnClickListener {
+            viewModel.insertPicture(item)
+        }
+
+
+
 
 
     }
