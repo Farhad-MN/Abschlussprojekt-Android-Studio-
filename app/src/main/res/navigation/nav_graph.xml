@@ -93,6 +93,9 @@
         <argument
             android:name="imageId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailFragment_to_appartmentFragment"
+            app:destination="@id/appartmentFragment" />
     </fragment>
 
     <fragment

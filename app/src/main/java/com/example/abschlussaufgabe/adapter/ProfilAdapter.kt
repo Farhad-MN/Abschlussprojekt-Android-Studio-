@@ -6,9 +6,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.databinding.ItemHomeBinding
 
 class ProfilAdapter (
-    private val dataset: MutableList<Int>
 
-) : RecyclerView.Adapter<ProfilAdapter.ItemViewHolder> (){
+    private val dataset: MutableList<Int>,
+
+
+    ) : RecyclerView.Adapter<ProfilAdapter.ItemViewHolder> (){
 
 
 
@@ -26,7 +28,7 @@ class ProfilAdapter (
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
-        val profilImage = dataset[position]
-        holder.binding
+        val pictures = dataset[position]
+
     }
 }

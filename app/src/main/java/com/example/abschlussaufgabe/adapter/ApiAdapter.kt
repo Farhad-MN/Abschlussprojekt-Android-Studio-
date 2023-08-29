@@ -38,6 +38,13 @@ class ApiAdapter(
             viewModel.insertPicture(item)
         }
 
+        holder.binding.btnDelet.setOnClickListener {
+            viewModel.deletePicture(item)
+        }
+
+
+
+
 
 
 

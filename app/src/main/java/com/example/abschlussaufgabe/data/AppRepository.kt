@@ -14,22 +14,14 @@ import com.example.abschlussaufgabe.data.remote.NaturApi
 class AppRepository(private val api: NaturApi, private val database: MyDatabase) {
 
 
-    fun getAllPicture(): LiveData<List<Picture>> {
-        return database.pictureDao.getAllPictures()
-    }
-    fun insertPicture(picture: Picture){
-        return database.pictureDao.insertPicture(picture)
-    }
+    private val _appertment = MutableLiveData<List<AppartmentData>>()
+    val appertment: LiveData<List<AppartmentData>>
+        get() = _appertment
 
-    fun getAllItem(): List<AppartmentData> {
-        return database.appartmentDao.getAllItem()
-    }
 
     private val _picture = MutableLiveData<List<Picture>>()
     val picture: LiveData<List<Picture>>
         get() = _picture
-
-
 
 
     private val _category = MutableLiveData<List<Category>>()
@@ -51,7 +43,10 @@ class AppRepository(private val api: NaturApi, private val database: MyDatabase)
         loadSettings()
         loadDetail()
         loadProfil()
+
     }
+
+
 
 
     fun loadProfil() {
@@ -133,11 +128,30 @@ class AppRepository(private val api: NaturApi, private val database: MyDatabase)
         }
     }
 
+    //Api DatenBank.
+    fun getAllPicture(): LiveData<List<Picture>> {
+        return database.pictureDao.getAllPictures()
+    }
+    fun insertPicture(picture: Picture){
+        return database.pictureDao.insertPicture(picture)
+    }
+
+    fun deletePicture(picture: Picture){
+        return database.pictureDao.deletePicture(picture)
+    }
+
     //Anzahl der Items in der Tabelle zählen
     //@return Anzahl der Items der Tabelle
     fun getCount():Int {
         return database.appartmentDao.getCount()
     }
+
+    //Appartment DantenBank.
+    fun getAllItem(): List<AppartmentData> {
+        return database.appartmentDao.getAllItem()
+    }
+
+
 
     //Funktion um Beispielwerte und Daten von der API bei leerer Datenbank in diese einzufügen
     fun prepopulateDB() {
@@ -158,7 +172,6 @@ class AppRepository(private val api: NaturApi, private val database: MyDatabase)
 
         }catch (e: Exception) { }
     }
-
 
 
 

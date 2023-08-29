@@ -79,7 +79,7 @@
             android:layout_marginStart="1dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="1dp"
-            android:background="@color/white"
+            android:background="@color/button"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +100,7 @@
             app:layout_constraintTop_toTopOf="@+id/toolbar6" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/rv_pictures"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="1dp"
@@ -137,7 +137,7 @@
             android:layout_width="200dp"
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
-            android:background="@color/white"
+            android:background="@color/button"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
@@ -153,7 +153,7 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintBottom_toTopOf="@+id/rv_pictures"
             app:layout_constraintEnd_toEndOf="@+id/toolbar11"
             app:layout_constraintStart_toStartOf="@+id/toolbar11"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />

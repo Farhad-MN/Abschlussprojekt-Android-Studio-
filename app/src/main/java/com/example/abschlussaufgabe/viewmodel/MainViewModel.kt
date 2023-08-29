@@ -26,6 +26,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
     }
 
+    val appertment = repository.appertment
 
     val pictures = repository.picture
 
@@ -45,12 +46,22 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         }
 
     }
-
+//Api DatenBank.
     fun insertPicture(picture: Picture){
         viewModelScope.launch{
             repository.insertPicture(picture)
         }
     }
+
+    fun deletePicture(picture: Picture){
+        viewModelScope.launch {
+            repository.deletePicture(picture)
+        }
+    }
+
+//Appertment DatenBank.
+
+
 
 
 

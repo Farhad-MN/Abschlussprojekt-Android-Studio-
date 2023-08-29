@@ -2,8 +2,10 @@ package com.example.abschlussaufgabe.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.databinding.ItemDetailBinding
+import com.example.abschlussaufgabe.ui.DetailFragmentDirections
 
 class DetailAdapter(
     private val dataset: MutableList<Int>
@@ -29,6 +31,12 @@ class DetailAdapter(
         //holder.binding.tvDetail02.text = context.getString(detailsImage.name)
         //holder.binding.tvDetail03.text = context.getString(detailsImage.name)
         holder.binding.ivRouter.setImageResource(detailsImage)
+
+
+        holder.binding.btnUnterkunfte.setOnClickListener {
+            val navController = holder.binding.detailCard.findNavController()
+            navController.navigate(DetailFragmentDirections.actionDetailFragmentToAppartmentFragment())
+        }
 
 
 
