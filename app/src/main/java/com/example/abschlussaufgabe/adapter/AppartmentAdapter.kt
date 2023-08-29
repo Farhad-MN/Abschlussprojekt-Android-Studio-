@@ -10,10 +10,8 @@ class AppartmentAdapter(
     private val items: List<AppartmentData>
 ): RecyclerView.Adapter<AppartmentAdapter.ItemViewHolder>() {
 
-    //Innere Klasse um die Elemente im View zu erreichen
-    //@param parent      Eltern-View-Group
-    //@param viewType    Art des Views
-    //@return Den ViewHolder der den RecyclerView und die Anzeige verbindet
+
+    // Den ViewHolder der den RecyclerView und die Anzeige verbindet
     class ItemViewHolder(val binding: ListItemAppartmentBinding) : RecyclerView.ViewHolder(binding.root)
 
 
@@ -30,7 +28,7 @@ class AppartmentAdapter(
     //@param position    Position des Elementes das gerade abgerufen wird
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val data = items[position]
-        val binding = holder.binding
+        //val binding = holder.binding
 
         holder.binding.txtTitle.text = data.title
         holder.binding.txtAddress.text = data.addresse

@@ -14,19 +14,23 @@ import com.example.abschlussaufgabe.data.remote.NaturApi
 class AppRepository(private val api: NaturApi, private val database: MyDatabase) {
 
 
+    /*---------------------- Appartment ------------------------------*/
+
     private val _appertment = MutableLiveData<List<AppartmentData>>()
     val appertment: LiveData<List<AppartmentData>>
         get() = _appertment
 
-
+    /*---------------------- Api DatenBank ------------------------------*/
     private val _picture = MutableLiveData<List<Picture>>()
     val picture: LiveData<List<Picture>>
         get() = _picture
 
+    /*---------------------- Category  ------------------------------*/
 
     private val _category = MutableLiveData<List<Category>>()
     val category: LiveData<List<Category>>
         get() = _category
+
 
     var homeImages = mutableListOf<Int>()
 
@@ -128,7 +132,9 @@ class AppRepository(private val api: NaturApi, private val database: MyDatabase)
         }
     }
 
-    //Api DatenBank.
+
+    /*---------------------- Api DatenBank ------------------------------*/
+
     fun getAllPicture(): LiveData<List<Picture>> {
         return database.pictureDao.getAllPictures()
     }
@@ -140,18 +146,21 @@ class AppRepository(private val api: NaturApi, private val database: MyDatabase)
         return database.pictureDao.deletePicture(picture)
     }
 
+
+    /*---------------------- Appartment DantenBank ------------------------------*/
+
+    //Liefert alle Items aus der Tabelle
+    //@return Alle Items der Tabelle
+
+    fun getAllItem(): List<AppartmentData> {
+        return database.appartmentDao.getAllItem()
+    }
+
     //Anzahl der Items in der Tabelle zählen
     //@return Anzahl der Items der Tabelle
     fun getCount():Int {
         return database.appartmentDao.getCount()
     }
-
-    //Appartment DantenBank.
-    fun getAllItem(): List<AppartmentData> {
-        return database.appartmentDao.getAllItem()
-    }
-
-
 
     //Funktion um Beispielwerte und Daten von der API bei leerer Datenbank in diese einzufügen
     fun prepopulateDB() {

@@ -2,8 +2,10 @@ package com.example.abschlussaufgabe.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.abschlussaufgabe.data.AppRepository
+import com.example.abschlussaufgabe.data.db.AppartmentData
 import com.example.abschlussaufgabe.data.db.MyDatabase
 import com.example.abschlussaufgabe.data.model.Picture
 import com.example.abschlussaufgabe.data.remote.NaturApi
@@ -16,8 +18,13 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     private val repository = AppRepository(NaturApi,MyDatabase.getDatabase(application))
 
 
+//Liste aller Appartments die im RecyclerView abgebildet werden
+    val appartmentsLiveData = MutableLiveData<List<AppartmentData>>()
+
+
 
     init {
+        loadFromDatabase()
         repository.getAllPicture()
         repository.getAllItem()
         repository.getCount()
@@ -46,7 +53,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         }
 
     }
-//Api DatenBank.
+    /*---------------------- Api DatenBank ------------------------------*/
     fun insertPicture(picture: Picture){
         viewModelScope.launch{
             repository.insertPicture(picture)
@@ -59,7 +66,14 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-//Appertment DatenBank.
+    /*---------------------- Appertment DatenBank ------------------------------*/
+
+    // Lade die Daten von der Datenbank in appartmentsLiveData
+    fun loadFromDatabase() {
+        appartmentsLiveData.value = repository.getAllItem()
+    }
+
+
 
 
 
