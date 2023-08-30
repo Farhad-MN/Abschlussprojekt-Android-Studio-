@@ -1,6 +1,7 @@
 package com.example.abschlussaufgabe.data.db
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -18,7 +19,7 @@ interface AppartmentDao {
 
     //Die Methode, die alle Daten aus der 'appartment_table' zurückliefert.
     @Query("SELECT * FROM appertment_table")
-    fun getAllItem(): List<AppartmentData>
+    suspend fun getAllItem(): List<AppartmentData>
 
 
     //Die Methode, um sich die Anzahl der Elemente in der appartment_table ausgeben zu lassen.
@@ -30,6 +31,9 @@ interface AppartmentDao {
 
     @Update
     fun updateItem(itemData: AppartmentData)
+
+    @Delete
+    fun deleteItem(itemData: AppartmentData)
 
 
 }

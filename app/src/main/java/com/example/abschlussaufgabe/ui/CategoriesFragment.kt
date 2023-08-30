@@ -36,5 +36,6 @@ class CategoriesFragment : Fragment() {
             binding.rvSport.adapter = CategoryAdapter(requireContext(),it)
         }
 
+
     }
 }

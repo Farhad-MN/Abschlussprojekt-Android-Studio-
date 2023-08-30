@@ -14,26 +14,24 @@ import kotlinx.coroutines.launch
 class MainViewModel(application: Application): AndroidViewModel(application) {
 
 
-
     private val repository = AppRepository(NaturApi,MyDatabase.getDatabase(application))
 
+    var savedPictures = repository.savedPictures
 
 //Liste aller Appartments die im RecyclerView abgebildet werden
     val appartmentsLiveData = MutableLiveData<List<AppartmentData>>()
 
 
 
+
     init {
-        loadFromDatabase()
-        repository.getAllPicture()
-        repository.getAllItem()
         repository.getCount()
         repository.prepopulateDB()
+        loadFromDatabase()
         getResults()
-
     }
 
-    val appertment = repository.appertment
+
 
     val pictures = repository.picture
 
@@ -47,19 +45,19 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
     val profilImages = repository.profilImages
 
+
+    /*---------------------- Api DatenBank ------------------------------*/
     fun getResults(){
         viewModelScope.launch {
             repository.getResults()
         }
-
     }
-    /*---------------------- Api DatenBank ------------------------------*/
+
     fun insertPicture(picture: Picture){
         viewModelScope.launch{
             repository.insertPicture(picture)
         }
     }
-
     fun deletePicture(picture: Picture){
         viewModelScope.launch {
             repository.deletePicture(picture)
@@ -68,19 +66,24 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
     /*---------------------- Appertment DatenBank ------------------------------*/
 
-    // Lade die Daten von der Datenbank in appartmentsLiveData
-    fun loadFromDatabase() {
-        appartmentsLiveData.value = repository.getAllItem()
+    fun insertItem(ItemData: AppartmentData){
+        viewModelScope.launch {
+            repository.insertItem(ItemData)
+        }
     }
 
+    // Lade die Daten von der Datenbank in appartmentsLiveData
+    fun loadFromDatabase() {
+        viewModelScope.launch {
+            appartmentsLiveData.value = repository.getAllItem()
+        }
+    }
 
-
-
-
-
-
-
-
+    fun deleteItem(ItemData: AppartmentData){
+        viewModelScope.launch {
+            repository.deleteItem(ItemData)
+        }
+    }
 
 
 }

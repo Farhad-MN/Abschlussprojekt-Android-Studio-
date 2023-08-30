@@ -11,17 +11,17 @@ import com.example.abschlussaufgabe.data.model.Picture
 @Dao
 interface PictureDao {
 
-    //Die Methode zum Einfügen eines Elements in die 'appartment_table'
+    //Die Methode zum Einfügen eines Elements in die 'picture_table'
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertPicture(pictureData: Picture)
 
 
-    //Die Methode, die alle Daten aus der 'appartment_table' zurückliefert.
+    //Die Methode, die alle Daten aus der 'picture_table' zurückliefert.
     @Query("SELECT * FROM picture_table")
-    fun getAllPictures(): LiveData<List<Picture>>
+    fun getSavedPictures(): LiveData<List<Picture>>
 
 
-    //Die Methode, um ein Item in der appartment_table zu aktualisieren.
+    //Die Methode, um ein Item in der picture_table zu Löschen.
 
     @Delete
     fun deletePicture(pictureData: Picture)

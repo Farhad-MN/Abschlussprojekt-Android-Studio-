@@ -2,23 +2,29 @@ package com.example.abschlussaufgabe.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
-import com.example.abschlussaufgabe.databinding.ItemHomeBinding
+import coil.load
+import com.example.abschlussaufgabe.data.model.Picture
+import com.example.abschlussaufgabe.databinding.ListItemPictureBinding
 
-class ProfilAdapter (
+class ProfilAdapter(
 
-    private val dataset: MutableList<Int>,
+
+    private val dataset: List<Picture>,
+
 
 
     ) : RecyclerView.Adapter<ProfilAdapter.ItemViewHolder> (){
 
 
+    class ItemViewHolder(val binding: ListItemPictureBinding) : RecyclerView.ViewHolder(binding.root)
 
-    class ItemViewHolder(val binding: ItemHomeBinding) : RecyclerView.ViewHolder(binding.root)
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
 
-        val binding = ItemHomeBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding = ListItemPictureBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ItemViewHolder(binding)
     }
 
@@ -28,7 +34,12 @@ class ProfilAdapter (
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
-        val pictures = dataset[position]
+        val data = dataset[position]
+        val imageUri = data.defaultImage!!.smallURL.toUri().buildUpon().scheme("https").build()
+        holder.binding.ivProfil.load(imageUri)
+        holder.binding.tvTitel.text = data.otherName.firstOrNull().toString()
+        holder.binding.tvOrder.text = data.scientificName.firstOrNull().toString()
+
 
     }
 }

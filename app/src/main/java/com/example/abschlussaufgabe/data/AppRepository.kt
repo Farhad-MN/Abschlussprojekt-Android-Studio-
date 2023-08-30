@@ -14,7 +14,7 @@ import com.example.abschlussaufgabe.data.remote.NaturApi
 class AppRepository(private val api: NaturApi, private val database: MyDatabase) {
 
 
-    /*---------------------- Appartment ------------------------------*/
+    /*---------------------- Appartment LiveData------------------------------*/
 
     private val _appertment = MutableLiveData<List<AppartmentData>>()
     val appertment: LiveData<List<AppartmentData>>
@@ -25,7 +25,11 @@ class AppRepository(private val api: NaturApi, private val database: MyDatabase)
     val picture: LiveData<List<Picture>>
         get() = _picture
 
-    /*---------------------- Category  ------------------------------*/
+
+    var savedPictures = database.pictureDao.getSavedPictures()
+
+
+    /*---------------------- Category LiveData  ------------------------------*/
 
     private val _category = MutableLiveData<List<Category>>()
     val category: LiveData<List<Category>>
@@ -124,42 +128,76 @@ class AppRepository(private val api: NaturApi, private val database: MyDatabase)
     }
 
 
-    suspend fun getResults() {
-        try {
-            _picture.value = NaturApi.retrofitService.getResults().data
-        } catch (e: Exception) {
-            Log.e("AppRepository", "${e}")
-        }
-    }
+
 
 
     /*---------------------- Api DatenBank ------------------------------*/
 
-    fun getAllPicture(): LiveData<List<Picture>> {
-        return database.pictureDao.getAllPictures()
+    suspend fun getResults() {
+        try {
+            _picture.value = NaturApi.retrofitService.getResults().data
+        } catch (e: Exception) {
+            Log.e("AppRepository", "${e.message}")
+        }
     }
-    fun insertPicture(picture: Picture){
-        return database.pictureDao.insertPicture(picture)
+
+
+     fun insertPicture(picture: Picture){
+        try {
+            database.pictureDao.insertPicture(picture)
+        } catch (e: Exception) {
+            Log.e("AppRepository", "${e.message}")
+        }
     }
 
     fun deletePicture(picture: Picture){
-        return database.pictureDao.deletePicture(picture)
+         try {
+            database.pictureDao.deletePicture(picture)
+        } catch (e: Exception) {
+            Log.e("AppRepository", "${e.message}")
+        }
     }
 
 
     /*---------------------- Appartment DantenBank ------------------------------*/
 
+
+    fun insertItem(ItemData: AppartmentData){
+        try {
+            database.appartmentDao.insertItem(ItemData)
+        } catch (e: Exception) {
+            Log.e("AppRepository", "${e.message}")
+        }
+    }
+
     //Liefert alle Items aus der Tabelle
     //@return Alle Items der Tabelle
 
-    fun getAllItem(): List<AppartmentData> {
-        return database.appartmentDao.getAllItem()
+    suspend fun getAllItem(): List<AppartmentData> {
+        return try {
+             database.appartmentDao.getAllItem()
+        } catch (e: Exception) {
+            Log.e("AppRepository", "${e.message}")
+            emptyList()
+        }
     }
 
     //Anzahl der Items in der Tabelle zählen
     //@return Anzahl der Items der Tabelle
     fun getCount():Int {
-        return database.appartmentDao.getCount()
+        return try {
+            database.appartmentDao.getCount()
+        } catch (e: Exception) {
+            Log.e("AppRepository", "${e.message}")
+        }
+    }
+
+    fun deleteItem(itemData: AppartmentData){
+        try {
+            database.appartmentDao.deleteItem(itemData)
+        } catch (e: Exception) {
+            Log.e("AppRepository", "${e.message}")
+        }
     }
 
     //Funktion um Beispielwerte und Daten von der API bei leerer Datenbank in diese einzufügen

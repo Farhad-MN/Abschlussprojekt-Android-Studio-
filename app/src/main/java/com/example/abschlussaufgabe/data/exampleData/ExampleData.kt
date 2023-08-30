@@ -82,7 +82,7 @@ object AppartmentsExampleData {
 
     )
     val appartment7 = AppartmentData(
-        id = 6,
+        id = 7,
         title = "Appartment-07",
         addresse = "KornStr.7A",
         sleeproom = 6,
@@ -94,7 +94,7 @@ object AppartmentsExampleData {
 
     )
     val appartment8 = AppartmentData(
-        id = 6,
+        id = 8,
         title = "Appartment-08",
         addresse = "HeimStr.8A",
         sleeproom = 6,

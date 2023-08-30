@@ -78,6 +78,9 @@
         <action
             android:id="@+id/action_categoriesFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -96,6 +99,9 @@
         <action
             android:id="@+id/action_detailFragment_to_appartmentFragment"
             app:destination="@id/appartmentFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
     </fragment>
 
     <fragment
@@ -128,5 +134,9 @@
     <fragment
         android:id="@+id/appartmentFragment"
         android:name="com.example.abschlussaufgabe.ui.AppartmentFragment"
-        android:label="AppartmentFragment" />
+        android:label="AppartmentFragment" >
+        <action
+            android:id="@+id/action_appartmentFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
 </navigation>

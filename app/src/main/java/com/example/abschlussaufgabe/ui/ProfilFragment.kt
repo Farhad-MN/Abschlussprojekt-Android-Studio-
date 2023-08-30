@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.example.abschlussaufgabe.R
+import com.example.abschlussaufgabe.adapter.ProfilAdapter
 import com.example.abschlussaufgabe.databinding.FragmentProfilBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
@@ -21,7 +22,7 @@ class ProfilFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profil,container,false)
         return binding.root
     }
@@ -30,17 +31,16 @@ class ProfilFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        viewModel.savedPictures.observe(viewLifecycleOwner){
+            binding.rvPictures.adapter = ProfilAdapter(it)
+        }
 
         binding.btnProfilBearbeiten.setOnClickListener {
             val navController = binding.profilLayout.findNavController()
             navController.navigate(ProfilFragmentDirections.actionProfilFragmentToEditFragment())
         }
-
-
-
-
-
     }
+
+
 
 }

@@ -5,9 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.abschlussaufgabe.data.db.AppartmentData
 import com.example.abschlussaufgabe.databinding.ListItemAppartmentBinding
+import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
 class AppartmentAdapter(
-    private val items: List<AppartmentData>
+    private val items: List<AppartmentData>,
+    private val viewModel: MainViewModel
 ): RecyclerView.Adapter<AppartmentAdapter.ItemViewHolder>() {
 
 
@@ -24,11 +26,9 @@ class AppartmentAdapter(
 
 
     //Lifecycle Methode, wird aufgerufen, wenn der ViewHolder mit der Anzeige verbunden wird
-    //@param holder      Der ViewHolder der den RecyclerView kontrolliert
-    //@param position    Position des Elementes das gerade abgerufen wird
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val data = items[position]
-        //val binding = holder.binding
+        val binding = holder.binding
 
         holder.binding.txtTitle.text = data.title
         holder.binding.txtAddress.text = data.addresse
@@ -37,6 +37,15 @@ class AppartmentAdapter(
         holder.binding.txtPersons.text = data.personas.toString()
         holder.binding.txtPricePerNight.text = data.pricePenNight.toString()
         holder.binding.imgAppartmentView.setImageResource(data.image)
+
+
+        holder.binding.btnSave1.setOnClickListener {
+            viewModel.insertItem(data)
+        }
+
+        holder.binding.btnDelet1.setOnClickListener {
+            viewModel.deleteItem(data)
+        }
     }
 
 
