@@ -3,6 +3,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="profil">Profil</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="settings">Einstellungen</string>
+
     /*---------------------- Category------------------------------*/
 
     <string name="category_01">Mountainbike</string>
@@ -50,6 +54,7 @@
     <string name="setting_12">Feedback + Hilfe</string>
     <string name="setting_13">App bewerten</string>
     <string name="setting_14">Rechtliches</string>
+
 
     /*---------------------- Spinner ------------------------------*/
 

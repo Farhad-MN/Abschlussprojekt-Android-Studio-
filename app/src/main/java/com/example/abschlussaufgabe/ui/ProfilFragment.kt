@@ -34,6 +34,9 @@ class ProfilFragment: Fragment() {
         viewModel.savedPictures.observe(viewLifecycleOwner){
             binding.rvPictures.adapter = ProfilAdapter(it)
         }
+        binding.fabMenu.setOnClickListener {
+            binding.drawer.open()
+        }
 
         binding.btnProfilBearbeiten.setOnClickListener {
             val navController = binding.profilLayout.findNavController()
