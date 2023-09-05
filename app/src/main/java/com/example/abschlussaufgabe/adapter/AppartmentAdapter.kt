@@ -46,6 +46,9 @@ class AppartmentAdapter(
         holder.binding.btnDelet1.setOnClickListener {
             viewModel.deleteItem(data)
         }
+
+
+
     }
 
 

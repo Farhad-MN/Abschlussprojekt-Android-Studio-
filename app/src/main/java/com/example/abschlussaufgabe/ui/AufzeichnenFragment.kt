@@ -20,7 +20,7 @@ class AufzeichnenFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAufzeichnenBinding.inflate(layoutInflater)
         return binding.root
     }
@@ -30,6 +30,7 @@ class AufzeichnenFragment: Fragment() {
 
         viewModel.pictures.observe(viewLifecycleOwner) {pictures ->
             binding.rvPictures.adapter = ApiAdapter(pictures,viewModel)
+
 
         }
 

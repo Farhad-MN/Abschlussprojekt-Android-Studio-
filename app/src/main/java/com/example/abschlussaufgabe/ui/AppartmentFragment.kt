@@ -10,7 +10,9 @@ import com.example.abschlussaufgabe.adapter.AppartmentAdapter
 import com.example.abschlussaufgabe.databinding.FragmentAppartmentBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
-class AppartmentFragment : Fragment() {
+class AppartmentFragment : Fragment(
+
+) {
 
     private lateinit var binding: FragmentAppartmentBinding
 
@@ -29,9 +31,14 @@ class AppartmentFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+
         viewModel.appartmentsLiveData.observe(viewLifecycleOwner){
             binding.rvAppertment.adapter = AppartmentAdapter(it,viewModel)
         }
+
+
+
+
 
     }
     override fun onStart() {

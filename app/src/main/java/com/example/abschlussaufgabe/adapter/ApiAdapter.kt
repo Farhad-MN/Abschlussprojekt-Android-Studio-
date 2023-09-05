@@ -23,6 +23,8 @@ class ApiAdapter(
 
     override fun onBindViewHolder(holder: ApiAdapter.ItemViewHolder, position: Int) {
 
+
+
         val item = dataset[position]
 
         val imageUri = item.defaultImage!!.mediumURL.toUri().buildUpon().scheme("https").build()
@@ -36,17 +38,13 @@ class ApiAdapter(
 
         holder.binding.btnSave.setOnClickListener {
             viewModel.insertPicture(item)
+
+
         }
 
         holder.binding.btnDelet.setOnClickListener {
             viewModel.deletePicture(item)
         }
-
-
-
-
-
-
 
 
     }

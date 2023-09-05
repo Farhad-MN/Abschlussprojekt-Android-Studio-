@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.adapter.DetailAdapter
 import com.example.abschlussaufgabe.databinding.FragmentDetailBinding
@@ -36,7 +37,10 @@ class DetailFragment : Fragment() {
 
         binding.rvRoute.adapter = DetailAdapter(viewModel.detailsImages)
 
-
+        binding.btnBack.setOnClickListener {
+            binding.btnBack.findNavController()
+                .navigate(DetailFragmentDirections.actionDetailFragmentToCategoriesFragment())
+        }
 
 
     }

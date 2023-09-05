@@ -21,16 +21,12 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 //Liste aller Appartments die im RecyclerView abgebildet werden
     val appartmentsLiveData = MutableLiveData<List<AppartmentData>>()
 
-
-
-
     init {
         repository.getCount()
         repository.prepopulateDB()
         loadFromDatabase()
         getResults()
     }
-
 
 
     val pictures = repository.picture

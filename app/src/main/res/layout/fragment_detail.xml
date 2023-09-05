@@ -56,5 +56,16 @@
             app:spanCount="1"
             tools:itemCount="11"
             tools:listitem="@layout/item_detail" />
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="#16FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+            app:layout_constraintStart_toStartOf="@+id/toolbar3"
+            app:layout_constraintTop_toTopOf="@+id/toolbar3"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
