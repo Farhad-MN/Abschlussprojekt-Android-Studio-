@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application): AndroidViewModel(application) {
 
+    // hier wird eine AppRepository Instanz erstellt, mit dem Parameter (Api & Datenbank)
 
     private val repository = AppRepository(NaturApi,MyDatabase.getDatabase(application))
 
@@ -28,6 +29,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         getResults()
     }
 
+    // hier werden die Daten aus dem repository in einer eigenen Variablen gespeichert
 
     val pictures = repository.picture
 
@@ -43,6 +45,9 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
 
     /*---------------------- Api DatenBank ------------------------------*/
+
+    //Diese Funktion ruft die Repository-Funktion zum Laden.
+
     fun getResults(){
         viewModelScope.launch {
             repository.getResults()
@@ -62,13 +67,15 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
     /*---------------------- Appertment DatenBank ------------------------------*/
 
+    //Diese Funktion ruft die Repository-Funktion zum Laden.
+
     fun insertItem(ItemData: AppartmentData){
         viewModelScope.launch {
             repository.insertItem(ItemData)
         }
     }
 
-    // Lade die Daten von der Datenbank in appartmentsLiveData
+
     fun loadFromDatabase() {
         viewModelScope.launch {
             appartmentsLiveData.value = repository.getAllItem()

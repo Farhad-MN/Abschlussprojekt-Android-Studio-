@@ -14,9 +14,12 @@ class AppartmentFragment : Fragment(
 
 ) {
 
+    // Benutzen das passende binding zum Fragment.
     private lateinit var binding: FragmentAppartmentBinding
 
     private val viewModel: MainViewModel by activityViewModels()
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,8 +38,6 @@ class AppartmentFragment : Fragment(
         viewModel.appartmentsLiveData.observe(viewLifecycleOwner){
             binding.rvAppertment.adapter = AppartmentAdapter(it,viewModel)
         }
-
-
 
 
 

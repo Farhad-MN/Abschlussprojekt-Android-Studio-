@@ -3,6 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    /*---------------------- Category------------------------------*/
+
     <string name="category_01">Mountainbike</string>
     <string name="category_02">Wandern</string>
     <string name="category_03">Fahrrad</string>
@@ -10,16 +12,29 @@
     <string name="category_05">Rennrad</string>
     <string name="category_06">Laufen</string>
 
+    <string name="categoryPicture">Category Picture</string>
+
+    /*---------------------- Login------------------------------*/
     <string name="registrierung">Registrierung</string>
     <string name="kategorien">Kategorien</string>
     <string name="willkommen_bei_bike_walk">Willkommen bei Bike + walk</string>
 
-    <string name="categoryPicture">Category Picture</string>
 
     <string name="anmelden_01">Anmelden mit Google</string>
     <string name="anmelden_02">Anmelden mit Facebook</string>
     <string name="anmelden_03">Anmelden mit Instagram</string>
 
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    /*---------------------- Setting ------------------------------*/
 
     <string name="setting_01">Mitteilungen</string>
     <string name="setting_02">Profil-Info</string>
@@ -35,15 +50,8 @@
     <string name="setting_12">Feedback + Hilfe</string>
     <string name="setting_13">App bewerten</string>
     <string name="setting_14">Rechtliches</string>
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+
+    /*---------------------- Spinner ------------------------------*/
 
     //todo spinner1
     <string-array name="sport_catecory">
