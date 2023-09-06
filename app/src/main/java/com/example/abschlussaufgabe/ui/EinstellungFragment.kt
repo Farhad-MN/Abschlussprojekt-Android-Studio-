@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.adapter.EinstellungAdapter
 import com.example.abschlussaufgabe.databinding.FragmentEinstellugBinding
@@ -31,6 +32,11 @@ class EinstellungFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         binding.rvEinstellung.adapter = EinstellungAdapter(requireContext(),viewModel.settingsListes)
+
+        binding.btnBack.setOnClickListener {
+            binding.btnBack.findNavController()
+                .navigate(EinstellungFragmentDirections.actionEinstellugFragmentToProfilFragment())
+        }
 
     }
 }

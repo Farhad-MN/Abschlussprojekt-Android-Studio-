@@ -39,12 +39,19 @@
         <action
             android:id="@+id/action_profilFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
+        <action
+            android:id="@+id/action_profilFragment_to_einstellugFragment"
+            app:destination="@id/einstellugFragment" />
     </fragment>
     <fragment
         android:id="@+id/einstellugFragment"
         android:name="com.example.abschlussaufgabe.ui.EinstellungFragment"
         android:label="fragment_einstellug"
-        tools:layout="@layout/fragment_einstellug" />
+        tools:layout="@layout/fragment_einstellug" >
+        <action
+            android:id="@+id/action_einstellugFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment2"
         android:name="com.example.abschlussaufgabe.ui.LoginFragment"
