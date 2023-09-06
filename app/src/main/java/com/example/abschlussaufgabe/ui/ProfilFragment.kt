@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.adapter.ProfilAdapter
 import com.example.abschlussaufgabe.databinding.FragmentProfilBinding
@@ -35,13 +36,17 @@ class ProfilFragment: Fragment() {
             binding.rvPictures.adapter = ProfilAdapter(it)
         }
         binding.fabMenu.setOnClickListener {
+
+            val navController = binding.navigationView.findNavController()
+            binding.navigationView.setupWithNavController(navController)
+
             binding.drawer.open()
+
+
         }
 
-        binding.btnProfilBearbeiten.setOnClickListener {
-            val navController = binding.profilLayout.findNavController()
-            navController.navigate(ProfilFragmentDirections.actionProfilFragmentToEditFragment())
-        }
+
+
     }
 
 

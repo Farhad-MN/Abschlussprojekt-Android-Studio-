@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
+
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
         val navHostFragment = supportFragmentManager.findFragmentById(binding.fragmentContainerView.id)as NavHostFragment
@@ -31,6 +33,9 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNav = binding.bottomNavigationBar
         setupWithNavController(bottomNav,navController)
+
+
+
 
     }
 

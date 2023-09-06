@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.findNavController
 import com.example.abschlussaufgabe.R
 import com.example.abschlussaufgabe.adapter.HomeAdapter
 import com.example.abschlussaufgabe.databinding.FragmentHomeBinding
@@ -37,9 +36,9 @@ class HomeFragment: Fragment() {
 
         binding.rvImages.adapter = HomeAdapter(viewModel.homeImages)
 
-        binding.btnKategorie.setOnClickListener {
+        /*binding.btnKategorie.setOnClickListener {
             val navController = binding.frameLayout.findNavController()
             navController.navigate(HomeFragmentDirections.actionHomeFragmentToCategoriesFragment())
-        }
+        }*/
     }
 }

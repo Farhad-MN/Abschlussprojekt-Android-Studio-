@@ -21,6 +21,10 @@
             android:id="@+id/einstellugFragment"
             android:icon="@drawable/baseline_settings_24"
             android:title="@string/settings" />
+        <item
+            android:id="@+id/loginFragment2"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="@string/loginOut" />
     </group>
 
 </menu>

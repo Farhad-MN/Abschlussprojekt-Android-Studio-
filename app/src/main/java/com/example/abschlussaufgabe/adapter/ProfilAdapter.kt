@@ -41,5 +41,6 @@ class ProfilAdapter(
         holder.binding.tvOrder.text = data.scientificName.firstOrNull().toString()
 
 
+
     }
 }

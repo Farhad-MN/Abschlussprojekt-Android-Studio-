@@ -6,6 +6,8 @@
     <string name="profil">Profil</string>
     <string name="edit">Bearbeiten</string>
     <string name="settings">Einstellungen</string>
+    <string name="loginOut">Auslogen</string>
+
 
     /*---------------------- Category------------------------------*/
 
@@ -21,7 +23,7 @@
     /*---------------------- Login------------------------------*/
     <string name="registrierung">Registrierung</string>
     <string name="kategorien">Kategorien</string>
-    <string name="willkommen_bei_bike_walk">Willkommen bei Bike + walk</string>
+    <string name="willkommen_bei_bike_walk">Willkommen bei Bike &amp; walk</string>
 
 
     <string name="anmelden_01">Anmelden mit Google</string>

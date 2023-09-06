@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/aufzeichnenFragment"
-        android:name="com.example.abschlussaufgabe.ui.AufzeichnenFragment"
+        android:name="com.example.abschlussaufgabe.ui.ApiFragment"
         android:label="fragment_aufzeichnen"
         tools:layout="@layout/fragment_aufzeichnen" />
     <fragment
@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_profilFragment_to_editFragment"
             app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_profilFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
     </fragment>
     <fragment
         android:id="@+id/einstellugFragment"

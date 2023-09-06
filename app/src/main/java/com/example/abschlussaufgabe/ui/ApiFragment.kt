@@ -11,7 +11,7 @@ import com.example.abschlussaufgabe.adapter.ApiAdapter
 import com.example.abschlussaufgabe.databinding.FragmentAufzeichnenBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
-class AufzeichnenFragment: Fragment() {
+class ApiFragment: Fragment() {
 
     private lateinit var binding: FragmentAufzeichnenBinding
 

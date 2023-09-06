@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.example.abschlussaufgabe.adapter.AppartmentAdapter
 import com.example.abschlussaufgabe.databinding.FragmentAppartmentBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
@@ -19,7 +20,17 @@ class AppartmentFragment : Fragment(
 
     private val viewModel: MainViewModel by activityViewModels()
 
+    private var id: Long = 0
+    private var name: Int = 0
+    private var imageId:Int = 0
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        arguments?.let {
+            id = it.getLong("id")
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,6 +48,11 @@ class AppartmentFragment : Fragment(
 
         viewModel.appartmentsLiveData.observe(viewLifecycleOwner){
             binding.rvAppertment.adapter = AppartmentAdapter(it,viewModel)
+        }
+
+        binding.btnBack.setOnClickListener {
+            binding.btnBack.findNavController()
+                .navigate(AppartmentFragmentDirections.actionAppartmentFragmentToDetailFragment(id,name, imageId))
         }
 
 
