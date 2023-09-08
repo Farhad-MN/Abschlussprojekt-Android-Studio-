@@ -20,8 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:background="@color/background"
-            android:backgroundTint="@color/background"
+            android:background="#025B5A5A"
+            android:backgroundTint="#2F5B5A5A"
             android:src="@drawable/app"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,13 +90,13 @@
             android:id="@+id/btn_Register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="84dp"
             android:backgroundTint="@color/btn_registieren"
             android:text="Registrieren"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_medien_Account" />
 
         <TextView
             android:id="@+id/textView5"

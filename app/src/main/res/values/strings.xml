@@ -2,6 +2,10 @@
     <string name="app_name">AbschlussAufgabe</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toast_msg1">Das Bild wurde gespeichert! </string>
+    <string name="toast_msg2">Das Bild wurde gelöscht! </string>
+
+
 
     <string name="profil">Profil</string>
     <string name="edit">Bearbeiten</string>

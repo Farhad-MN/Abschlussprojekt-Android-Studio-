@@ -9,6 +9,7 @@ import com.example.abschlussaufgabe.data.model.Picture
 import com.example.abschlussaufgabe.databinding.ItemAufzeichnenBinding
 import com.example.abschlussaufgabe.viewmodel.MainViewModel
 
+
 class ApiAdapter(
     private val dataset: List<Picture>,
     private val viewModel: MainViewModel
@@ -20,6 +21,8 @@ class ApiAdapter(
         val binding = ItemAufzeichnenBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ItemViewHolder(binding)
     }
+
+
 
     override fun onBindViewHolder(holder: ApiAdapter.ItemViewHolder, position: Int) {
 
@@ -36,11 +39,11 @@ class ApiAdapter(
             holder.binding.tvTittel.text = item.otherName.firstOrNull().toString()
         }
 
-        holder.binding.btnSave.setOnClickListener {
+        holder.binding.btnSave.setOnClickListener() {
+
             viewModel.insertPicture(item)
-
-
         }
+
 
         holder.binding.btnDelet.setOnClickListener {
             viewModel.deletePicture(item)
